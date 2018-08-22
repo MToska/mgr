@@ -9,18 +9,29 @@ router.get('/', function (req, res) {
     res.render('index');
 });
 
+router.get('/parameters', function (req, res) {
+    res.render('parameters');
+});
+
+router.get('/', function (req, res) {
+    res.render('index');
+});
+
 
 // Connect to the db
 
 var url = 'mongodb://localhost:27017';
 
+router.get('/get-data', function (req, res) {
+
 MongoClient.connect(url, (err, client) => {
     var db = client.db('my_mgr');
-    db.collection('my_data').find({P1010: 29.1992}).toArray(function (err, docs) {
+    db.collection('my_data').find({ P1010: 29.1992 }).toArray(function (err, docs) {
 
         // Print the documents returned
-        docs.forEach(function (doc) {
-            console.log(doc);
+        docs.forEach(function (docs) {
+            console.log(docs);
+            res.render('index', { items: docs });
         });
 
         // Close the DB
@@ -28,7 +39,7 @@ MongoClient.connect(url, (err, client) => {
     });
 
 });
-
+});
 
 
 module.exports = router;

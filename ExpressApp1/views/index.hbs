@@ -1,12 +1,214 @@
-﻿<h1>Parametry COS</h1>
+﻿<div class="navbar">
+    <h1>Wyszukiwarka parametrów COS</h1>
+    <p class="menu"><a href="/parameters">Parametry COS</a></p>
+</div>
 <section class="get">
-    <h3>Search Data</h3>
-    <a href="/get-data">LOAD DATA</a>
-    <div>
-        {{# each items }}
-        <article class="item">
-            <div>Title: {{ P1010 }}</div>
-        </article>
-        {{/each}}
+    <div class="main-space">
+        <div class="left-part">
+            <p class="speed">PRĘDKOŚĆ [m/min]</p>
+            <div class="buttons">
+                <button>0.6</button>
+                <button>0.8</button>
+                <button>1.0</button>
+                <button>2.0</button>
+            </div>
+
+            <a href="/get-data">LOAD DATA</a>
+            <div>P1010: {{ items.P1010}}</div>
+            <div>P1034: {{ items.P1034}}</div>
+        </div>
+        <div class="right-part">
+            <p class="your-selection">Wybrany parametr: </p>
+            <div class="zones">
+                <div class="first-zone">
+                    <p>Pasmo 1</p>
+                    <table>
+                        <tr>
+                            <th>P1034</th>
+                            <th>P1036</th>
+                            <th>P1058</th>
+                            <th>P1060</th>
+                            <th>P1062</th>
+                            <th>P1064</th>
+                            <th>P1104</th>
+                            <th>P1106</th>
+                            <th>P1108</th>
+                            <th>P1112</th>
+                            <th>P1114</th>
+                            <th>P1118</th>
+                            <th>P1120</th>
+                            <th>P1122</th>
+                            <th>P1124</th>
+                            <th>P1126</th>
+                            <th>P1128</th>
+                            <th>P1130</th>
+                            <th>P1132</th>
+                            <th>P1134</th>
+                            <th>P1136</th>
+                            <th>P1138</th>
+                            <th>P1140</th>
+                            <th>P1142</th>
+                            <th>P1144</th>
+                            <th>P1146</th>
+                            <th>P1148</th>
+                            <th>P1150</th>
+                            <th>P1152</th>
+                            <th>P1154</th>
+                            <th>P1156</th>
+                            <th>P1158</th>
+                            <th>P1160</th>
+                            <th>P1162</th>
+                            <th>P1164</th>
+                            <th>P1166</th>
+                            <th>P1168</th>
+                            <th>P1170</th>
+                            <th>P1172</th>
+                            <th>P1182</th>
+                            <th>P1188</th>
+                            <th>P1194</th>
+                        </tr>
+                        <tr>
+                            <th>[m/min]</th>
+                            <th>[m/min]</th>
+                            <th>[mm]</th>
+                            <th>[mm]</th>
+                            <th>[mm]</th>
+                            <th>[mm]</th>
+                            <th>[m/min]</th>
+                            <th>[bar]</th>
+                            <th>[°C]</th>
+                            <th>[bar]</th>
+                            <th>[°C]</th>
+                            <th>[l/min]</th>
+                            <th>[l/min]</th>
+                            <th>[l/min]</th>
+                            <th>[l/min]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[l/min]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[bar]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[m/min]</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="second-zone">
+                    <p>Pasmo 2</p>
+                    <table>
+                        <tr>
+                            <th>P2034</th>
+                            <th>P2036</th>
+                            <th>P2058</th>
+                            <th>P2060</th>
+                            <th>P2062</th>
+                            <th>P2064</th>
+                            <th>P2104</th>
+                            <th>P2106</th>
+                            <th>P2108</th>
+                            <th>P2112</th>
+                            <th>P2114</th>
+                            <th>P2118</th>
+                            <th>P2120</th>
+                            <th>P2122</th>
+                            <th>P2124</th>
+                            <th>P2126</th>
+                            <th>P2128</th>
+                            <th>P2130</th>
+                            <th>P2132</th>
+                            <th>P2134</th>
+                            <th>P2136</th>
+                            <th>P2138</th>
+                            <th>P2140</th>
+                            <th>P2142</th>
+                            <th>P2144</th>
+                            <th>P2146</th>
+                            <th>P2148</th>
+                            <th>P2150</th>
+                            <th>P2152</th>
+                            <th>P2154</th>
+                            <th>P2156</th>
+                            <th>P2158</th>
+                            <th>P2160</th>
+                            <th>P2162</th>
+                            <th>P2164</th>
+                            <th>P2166</th>
+                            <th>P2168</th>
+                            <th>P2170</th>
+                            <th>P2172</th>
+                            <th>P2182</th>
+                            <th>P2188</th>
+                            <th>P2194</th>
+                        </tr>
+                        <tr>
+                            <th>[m/min]</th>
+                            <th>[m/min]</th>
+                            <th>[mm]</th>
+                            <th>[mm]</th>
+                            <th>[mm]</th>
+                            <th>[mm]</th>
+                            <th>[m/min]</th>
+                            <th>[bar]</th>
+                            <th>[°C]</th>
+                            <th>[bar]</th>
+                            <th>[°C]</th>
+                            <th>[l/min]</th>
+                            <th>[l/min]</th>
+                            <th>[l/min]</th>
+                            <th>[l/min]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[l/min]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[bar]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[l/min]</th>
+                            <th>[bar]</th>
+                            <th>[°C]</th>
+                            <th>[°C]</th>
+                            <th>[m/min]</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </section>
