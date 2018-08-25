@@ -32,10 +32,16 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="routes\index.js" />
-    <Compile Include="routes\users.js" />
+    <Compile Include="routes\uploading.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Content Include="package.json" />
+    <Content Include="public\stylesheets\icon.png" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
+    <Content Include="views\addingdb.hbs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\error.hbs" />
     <Content Include="views\index.hbs">
       <SubType>Code</SubType>

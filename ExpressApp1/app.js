@@ -7,9 +7,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
+var mongo= require('mongodb');
+
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var uploading = require('./routes/uploading');
 
 var app = express();
 
@@ -26,8 +28,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 app.use('/', routes);
-app.use('/users', users);
+//app.use('/uploading', uploading);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -59,6 +64,10 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
+
+
+
+
 
 app.set('port', process.env.PORT || 3000);
 

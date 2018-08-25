@@ -4,18 +4,22 @@
 </div>
 <section class="get">
     <div class="main-space">
+        <div class="new-db-button">
+            <a href="/addingdb">
+                <button class="add-db"> Dodaj plik </button>
+            </a>
+        </div>
         <div class="left-part">
             <p class="speed">PRĘDKOŚĆ [m/min]</p>
             <div class="buttons">
-                <button>0.6</button>
-                <button>0.8</button>
-                <button>1.0</button>
-                <button>2.0</button>
+                <button class="val butts">0.6</button>
+                <button class="val butts">0.8</button>
+                <button class="val butts">1.0</button>
+                <button class="val butts">2.0</button>
             </div>
 
             <a href="/get-data">LOAD DATA</a>
             <div>P1010: {{ items.P1010}}</div>
-            <div>P1034: {{ items.P1034}}</div>
         </div>
         <div class="right-part">
             <p class="your-selection">Wybrany parametr: </p>
@@ -24,6 +28,7 @@
                     <p>Pasmo 1</p>
                     <table>
                         <tr>
+                            <th>     </th>
                             <th>P1034</th>
                             <th>P1036</th>
                             <th>P1058</th>
@@ -68,6 +73,7 @@
                             <th>P1194</th>
                         </tr>
                         <tr>
+                            <th>       </th>
                             <th>[m/min]</th>
                             <th>[m/min]</th>
                             <th>[mm]</th>
@@ -111,12 +117,104 @@
                             <th>[°C]</th>
                             <th>[m/min]</th>
                         </tr>
+                        <tr>
+                            <th>Max</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>Min</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+
                     </table>
                 </div>
                 <div class="second-zone">
                     <p>Pasmo 2</p>
                     <table>
                         <tr>
+                            <th>     </th>
                             <th>P2034</th>
                             <th>P2036</th>
                             <th>P2058</th>
@@ -161,6 +259,7 @@
                             <th>P2194</th>
                         </tr>
                         <tr>
+                            <th>       </th>
                             <th>[m/min]</th>
                             <th>[m/min]</th>
                             <th>[mm]</th>
@@ -203,6 +302,96 @@
                             <th>[°C]</th>
                             <th>[°C]</th>
                             <th>[m/min]</th>
+                        </tr>
+                        <tr>
+                            <th>Max</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>Min</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </table>
                 </div>
