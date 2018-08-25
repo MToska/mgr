@@ -32,9 +32,6 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="routes\index.js" />
-    <Compile Include="routes\uploading.js">
-      <SubType>Code</SubType>
-    </Compile>
     <Content Include="package.json" />
     <Content Include="public\stylesheets\icon.png" />
     <Content Include="public\stylesheets\main.css" />

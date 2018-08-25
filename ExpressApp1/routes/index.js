@@ -4,6 +4,8 @@ var router = express.Router();
 var assert = require('assert');
 var MongoClient = require('mongodb').MongoClient;
 
+var url = 'mongodb://localhost:27017';
+
 /* GET home page. */
 router.get('/', function (req, res) {
     res.render('index');
@@ -16,30 +18,37 @@ router.get('/parameters', function (req, res) {
 router.get('/', function (req, res) {
     res.render('index');
 });
+router.get('/addingdb', function (req, res) {
+    res.render('addingdb');
+
+});
 
 
-// Connect to the db
-
-var url = 'mongodb://localhost:27017';
-
-router.get('/get-data', function (req, res) {
+router.get('/v-06', function (req, res) {
 
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-        db.collection('my_data').find({ P1010: 29.1992 }).toArray(function (err, docs) {
 
-            // Print the documents returned
-            docs.forEach(function (docs) {
-                console.log(docs);
-                res.render('index', { items: docs });
-            });
+        try {
+            var results = db.collection('P1').aggregate(
+                [
+                    { $match: { P1034: { $gt: 0.6, $lt: 0.7 } } },
+                    {
+                        $group: {
+                            _id: null,
+                            doc: { $avg: "$P1034" }
+                        }
+                    }
+                ]
+            );
+        }
+            catch (err) {
+            console.log(err);
+        }
 
-            // Close the DB
-            client.close();
-        });
-
-    });
 });
+});
+
 
 
 module.exports = router;
