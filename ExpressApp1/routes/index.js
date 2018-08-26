@@ -28,27 +28,26 @@ router.get('/v-06', function (req, res) {
 
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-
-        try {
             var results = db.collection('P1').aggregate(
                 [
-                    { $match: { P1034: { $gt: 0.6, $lt: 0.7 } } },
+                    { $match: { P1034: { $gt: 0.6, $lt: 0.63 } } },
                     {
                         $group: {
                             _id: null,
                             doc: { $avg: "$P1034" }
                         }
                     }
-                ]
+                ]).next(function (err, results) {
+                    try {
+                        console.log(results.doc);
+                        res.render('index', {results})
+                    } catch(err){
+                        console.log(err);
+                    }
+                    
+                }
             );
-        }
-            catch (err) {
-            console.log(err);
-        }
-
 });
 });
-
-
 
 module.exports = router;
