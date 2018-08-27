@@ -83,6 +83,10 @@ h1 {
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+.parametrycos {
     color: #bbb4b4;
 }
 
