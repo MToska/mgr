@@ -118,4 +118,12 @@ tr:nth-child(even) {
     display: inline;
 }
 
+
+.speed-group1,
+.speed-group2 {
+    width: 50%;
+    display: table-cell;
+    padding-bottom: 1em;
+    padding-right: 4em;
+}
 /*parameters*/

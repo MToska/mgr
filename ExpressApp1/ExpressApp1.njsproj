@@ -31,12 +31,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="JavaScript.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes\index.js" />
+    <Compile Include="routes\mySchema.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="routes\upload.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Content Include="package.json" />
     <Content Include="public\stylesheets\icon.png" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
-    <Content Include="views\addingdb.hbs">
+    <Content Include="views\newdb.hbs">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\error.hbs" />

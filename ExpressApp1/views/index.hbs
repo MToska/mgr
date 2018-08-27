@@ -1,24 +1,35 @@
 ﻿<div class="navbar">
-    <h1>Wyszukiwarka parametrów COS</h1>
+    <h1>Dobór głównych danych technologicznych</h1>
     <p class="menu"><a href="/parameters">Parametry COS</a></p>
 </div>
 <section class="get">
     <div class="main-space">
         <div class="new-db-button">
-            <a href="/addingdb">
-                <button class="add-db"> Dodaj plik </button>
-            </a>
+            <form action="/" method="POST" encType="multipart/form-data">
+                <input type="file" name="file" accept="*.csv" /><br /><br />
+                <input type="submit" value="Upload" />
+            </form>
         </div>
         <div class="left-part">
             <p class="speed">PRĘDKOŚĆ [m/min]</p>
+            <div class="speed-groups">
+                <form action="/index.js">
+                    <div class="speed-group1">
+                        <input type="radio" name="speed-groups" value="grupa1" id="grupa1"> Grupa 1<br>
+                    </div>
+                    <div class="speed-group2">
+                        <input type="radio" name="speed-groups" value="grupa2" id="grupa2"> Grupa 2<br>
+                    </div>
+                </form>
+            </div>
             <div class="buttons">
                 <button class="val butts"><a href="/v-06">0.6</a></button>
-                <button class="val butts">0.8</button>
+                <button class="val butts"><a href="/v-08">0.8</a></button>
                 <button class="val butts">1.0</button>
                 <button class="val butts">2.0</button>
             </div>
 
-            <div>my6: {{results.doc}}</div>
+            <div>avg 1034 for 0.6: {{results.avgP2034}}</div>
         </div>
         <div class="right-part">
             <p class="your-selection">Wybrany parametr: </p>
@@ -117,94 +128,139 @@
                             <th>[m/min]</th>
                         </tr>
                         <tr>
-                            <th>Max</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <th>Min</th>
+                            <th>{{results.minP1034}}</th>
+                            <th>{{results.minP1036}}</th>
+                            <th>{{results.minP1058}}</th>
+                            <th>{{results.minP1060}}</th>
+                            <th>{{results.minP1062}}</th>
+                            <th>{{results.minP1064}}</th>
+                            <th>{{results.minP1104}}</th>
+                            <th>{{results.minP1106}}</th>
+                            <th>{{results.minP1108}}</th>
+                            <th>{{results.minP1112}}</th>
+                            <th>{{results.minP1114}}</th>
+                            <th>{{results.minP1118}}</th>
+                            <th>{{results.minP1120}}</th>
+                            <th>{{results.minP1122}}</th>
+                            <th>{{results.minP1124}}</th>
+                            <th>{{results.minP1126}}</th>
+                            <th>{{results.minP1128}}</th>
+                            <th>{{results.minP1130}}</th>
+                            <th>{{results.minP1132}}</th>
+                            <th>{{results.minP1134}}</th>
+                            <th>{{results.minP1136}}</th>
+                            <th>{{results.minP1138}}</th>
+                            <th>{{results.minP1140}}</th>
+                            <th>{{results.minP1142}}</th>
+                            <th>{{results.minP1144}}</th>
+                            <th>{{results.minP1146}}</th>
+                            <th>{{results.minP1148}}</th>
+                            <th>{{results.minP1150}}</th>
+                            <th>{{results.minP1152}}</th>
+                            <th>{{results.minP1154}}</th>
+                            <th>{{results.minP1156}}</th>
+                            <th>{{results.minP1158}}</th>
+                            <th>{{results.minP1160}}</th>
+                            <th>{{results.minP1162}}</th>
+                            <th>{{results.minP1164}}</th>
+                            <th>{{results.minP1166}}</th>
+                            <th>{{results.minP1168}}</th>
+                            <th>{{results.minP1170}}</th>
+                            <th>{{results.minP1172}}</th>
+                            <th>{{results.minP1182}}</th>
+                            <th>{{results.minP1188}}</th>
+                            <th>{{results.minP1194}}</th>
                         </tr>
                         <tr>
-                            <th>Min</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <th>Max</th>
+                            <th>{{results.maxP1034}}</th>
+                            <th>{{results.maxP1036}}</th>
+                            <th>{{results.maxP1058}}</th>
+                            <th>{{results.maxP1060}}</th>
+                            <th>{{results.maxP1062}}</th>
+                            <th>{{results.maxP1064}}</th>
+                            <th>{{results.maxP1104}}</th>
+                            <th>{{results.maxP1106}}</th>
+                            <th>{{results.maxP1108}}</th>
+                            <th>{{results.maxP1112}}</th>
+                            <th>{{results.maxP1114}}</th>
+                            <th>{{results.maxP1118}}</th>
+                            <th>{{results.maxP1120}}</th>
+                            <th>{{results.maxP1122}}</th>
+                            <th>{{results.maxP1124}}</th>
+                            <th>{{results.maxP1126}}</th>
+                            <th>{{results.maxP1128}}</th>
+                            <th>{{results.maxP1130}}</th>
+                            <th>{{results.maxP1132}}</th>
+                            <th>{{results.maxP1134}}</th>
+                            <th>{{results.maxP1136}}</th>
+                            <th>{{results.maxP1138}}</th>
+                            <th>{{results.maxP1140}}</th>
+                            <th>{{results.maxP1142}}</th>
+                            <th>{{results.maxP1144}}</th>
+                            <th>{{results.maxP1146}}</th>
+                            <th>{{results.maxP1148}}</th>
+                            <th>{{results.maxP1150}}</th>
+                            <th>{{results.maxP1152}}</th>
+                            <th>{{results.maxP1154}}</th>
+                            <th>{{results.maxP1156}}</th>
+                            <th>{{results.maxP1158}}</th>
+                            <th>{{results.maxP1160}}</th>
+                            <th>{{results.maxP1162}}</th>
+                            <th>{{results.maxP1164}}</th>
+                            <th>{{results.maxP1166}}</th>
+                            <th>{{results.maxP1168}}</th>
+                            <th>{{results.maxP1170}}</th>
+                            <th>{{results.maxP1172}}</th>
+                            <th>{{results.maxP1182}}</th>
+                            <th>{{results.maxP1188}}</th>
+                            <th>{{results.maxP1194}}</th>
+                        </tr>
+                        <tr>
+                            <th>Średnia</th>
+                            <th>{{results.avgP1034}}</th>
+                            <th>{{results.avgP1036}}</th>
+                            <th>{{results.avgP1058}}</th>
+                            <th>{{results.avgP1060}}</th>
+                            <th>{{results.avgP1062}}</th>
+                            <th>{{results.avgP1064}}</th>
+                            <th>{{results.avgP1104}}</th>
+                            <th>{{results.avgP1106}}</th>
+                            <th>{{results.avgP1108}}</th>
+                            <th>{{results.avgP1112}}</th>
+                            <th>{{results.avgP1114}}</th>
+                            <th>{{results.avgP1118}}</th>
+                            <th>{{results.avgP1120}}</th>
+                            <th>{{results.avgP1122}}</th>
+                            <th>{{results.avgP1124}}</th>
+                            <th>{{results.avgP1126}}</th>
+                            <th>{{results.avgP1128}}</th>
+                            <th>{{results.avgP1130}}</th>
+                            <th>{{results.avgP1132}}</th>
+                            <th>{{results.avgP1134}}</th>
+                            <th>{{results.avgP1136}}</th>
+                            <th>{{results.avgP1138}}</th>
+                            <th>{{results.avgP1140}}</th>
+                            <th>{{results.avgP1142}}</th>
+                            <th>{{results.avgP1144}}</th>
+                            <th>{{results.avgP1146}}</th>
+                            <th>{{results.avgP1148}}</th>
+                            <th>{{results.avgP1150}}</th>
+                            <th>{{results.avgP1152}}</th>
+                            <th>{{results.avgP1154}}</th>
+                            <th>{{results.avgP1156}}</th>
+                            <th>{{results.avgP1158}}</th>
+                            <th>{{results.avgP1160}}</th>
+                            <th>{{results.avgP1162}}</th>
+                            <th>{{results.avgP1164}}</th>
+                            <th>{{results.avgP1166}}</th>
+                            <th>{{results.avgP1168}}</th>
+                            <th>{{results.avgP1170}}</th>
+                            <th>{{results.avgP1172}}</th>
+                            <th>{{results.avgP1182}}</th>
+                            <th>{{results.avgP1188}}</th>
+                            <th>{{results.avgP1194}}</th>
                         </tr>
 
                     </table>
@@ -303,95 +359,141 @@
                             <th>[m/min]</th>
                         </tr>
                         <tr>
-                            <th>Max</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <th>Min</th>
+                            <th>{{results.minP2034}}</th>
+                            <th>{{results.minP2036}}</th>
+                            <th>{{results.minP2058}}</th>
+                            <th>{{results.minP2060}}</th>
+                            <th>{{results.minP2062}}</th>
+                            <th>{{results.minP2064}}</th>
+                            <th>{{results.minP2104}}</th>
+                            <th>{{results.minP2106}}</th>
+                            <th>{{results.minP2108}}</th>
+                            <th>{{results.minP2112}}</th>
+                            <th>{{results.minP2114}}</th>
+                            <th>{{results.minP2118}}</th>
+                            <th>{{results.minP2120}}</th>
+                            <th>{{results.minP2122}}</th>
+                            <th>{{results.minP2124}}</th>
+                            <th>{{results.minP2126}}</th>
+                            <th>{{results.minP2128}}</th>
+                            <th>{{results.minP2130}}</th>
+                            <th>{{results.minP2132}}</th>
+                            <th>{{results.minP2134}}</th>
+                            <th>{{results.minP2136}}</th>
+                            <th>{{results.minP2138}}</th>
+                            <th>{{results.minP2140}}</th>
+                            <th>{{results.minP2142}}</th>
+                            <th>{{results.minP2144}}</th>
+                            <th>{{results.minP2146}}</th>
+                            <th>{{results.minP2148}}</th>
+                            <th>{{results.minP2150}}</th>
+                            <th>{{results.minP2152}}</th>
+                            <th>{{results.minP2154}}</th>
+                            <th>{{results.minP2156}}</th>
+                            <th>{{results.minP2158}}</th>
+                            <th>{{results.minP2160}}</th>
+                            <th>{{results.minP2162}}</th>
+                            <th>{{results.minP2164}}</th>
+                            <th>{{results.minP2166}}</th>
+                            <th>{{results.minP2168}}</th>
+                            <th>{{results.minP2170}}</th>
+                            <th>{{results.minP2172}}</th>
+                            <th>{{results.minP2182}}</th>
+                            <th>{{results.minP2188}}</th>
+                            <th>{{results.minP2194}}</th>
                         </tr>
                         <tr>
-                            <th>Min</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <th>Max</th>
+                            <th>{{results.maxP2034}}</th>
+                            <th>{{results.maxP2036}}</th>
+                            <th>{{results.maxP2058}}</th>
+                            <th>{{results.maxP2060}}</th>
+                            <th>{{results.maxP2062}}</th>
+                            <th>{{results.maxP2064}}</th>
+                            <th>{{results.maxP2104}}</th>
+                            <th>{{results.maxP2106}}</th>
+                            <th>{{results.maxP2108}}</th>
+                            <th>{{results.maxP2112}}</th>
+                            <th>{{results.maxP2114}}</th>
+                            <th>{{results.maxP2118}}</th>
+                            <th>{{results.maxP2120}}</th>
+                            <th>{{results.maxP2122}}</th>
+                            <th>{{results.maxP2124}}</th>
+                            <th>{{results.maxP2126}}</th>
+                            <th>{{results.maxP2128}}</th>
+                            <th>{{results.maxP2130}}</th>
+                            <th>{{results.maxP2132}}</th>
+                            <th>{{results.maxP2134}}</th>
+                            <th>{{results.maxP2136}}</th>
+                            <th>{{results.maxP2138}}</th>
+                            <th>{{results.maxP2140}}</th>
+                            <th>{{results.maxP2142}}</th>
+                            <th>{{results.maxP2144}}</th>
+                            <th>{{results.maxP2146}}</th>
+                            <th>{{results.maxP2148}}</th>
+                            <th>{{results.maxP2150}}</th>
+                            <th>{{results.maxP2152}}</th>
+                            <th>{{results.maxP2154}}</th>
+                            <th>{{results.maxP2156}}</th>
+                            <th>{{results.maxP2158}}</th>
+                            <th>{{results.maxP2160}}</th>
+                            <th>{{results.maxP2162}}</th>
+                            <th>{{results.maxP2164}}</th>
+                            <th>{{results.maxP2166}}</th>
+                            <th>{{results.maxP2168}}</th>
+                            <th>{{results.maxP2170}}</th>
+                            <th>{{results.maxP2172}}</th>
+                            <th>{{results.maxP2182}}</th>
+                            <th>{{results.maxP2188}}</th>
+                            <th>{{results.maxP2194}}</th>
                         </tr>
+                        <tr>
+                            <th>Średnia</th>
+                            <th>{{results.avgP2034}}</th>
+                            <th>{{results.avgP2036}}</th>
+                            <th>{{results.avgP2058}}</th>
+                            <th>{{results.avgP2060}}</th>
+                            <th>{{results.avgP2062}}</th>
+                            <th>{{results.avgP2064}}</th>
+                            <th>{{results.avgP2104}}</th>
+                            <th>{{results.avgP2106}}</th>
+                            <th>{{results.avgP2108}}</th>
+                            <th>{{results.avgP2112}}</th>
+                            <th>{{results.avgP2114}}</th>
+                            <th>{{results.avgP2118}}</th>
+                            <th>{{results.avgP2120}}</th>
+                            <th>{{results.avgP2122}}</th>
+                            <th>{{results.avgP2124}}</th>
+                            <th>{{results.avgP2126}}</th>
+                            <th>{{results.avgP2128}}</th>
+                            <th>{{results.avgP2130}}</th>
+                            <th>{{results.avgP2132}}</th>
+                            <th>{{results.avgP2134}}</th>
+                            <th>{{results.avgP2136}}</th>
+                            <th>{{results.avgP2138}}</th>
+                            <th>{{results.avgP2140}}</th>
+                            <th>{{results.avgP2142}}</th>
+                            <th>{{results.avgP2144}}</th>
+                            <th>{{results.avgP2146}}</th>
+                            <th>{{results.avgP2148}}</th>
+                            <th>{{results.avgP2150}}</th>
+                            <th>{{results.avgP2152}}</th>
+                            <th>{{results.avgP2154}}</th>
+                            <th>{{results.avgP2156}}</th>
+                            <th>{{results.avgP2158}}</th>
+                            <th>{{results.avgP2160}}</th>
+                            <th>{{results.avgP2162}}</th>
+                            <th>{{results.avgP2164}}</th>
+                            <th>{{results.avgP2166}}</th>
+                            <th>{{results.avgP2168}}</th>
+                            <th>{{results.avgP2170}}</th>
+                            <th>{{results.avgP2172}}</th>
+                            <th>{{results.avgP2182}}</th>
+                            <th>{{results.avgP2188}}</th>
+                            <th>{{results.avgP2194}}</th>
+                        </tr>
+
                     </table>
                 </div>
             </div>

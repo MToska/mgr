@@ -8,12 +8,19 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
 const crypto = require('crypto');
-const mongodb= require('mongodb');
+const mongodb = require('mongodb');
+var fileUpload = require('express-fileupload');
+var mongoose = require('mongoose');
+
 
 var routes = require('./routes/index');
+var upload = require('./routes/upload');
+var mySchema = require('./routes/mySchema');
 
 
 var app = express();
+app.use(fileUpload());
+mongoose.connect('mongodb://localhost/my_mgr');
 
 // view engine setup
 app.engine('hbs', hbs({ extname: 'hbs', defaultLayout:'layout', layoutsDir: __dirname + '/views/'}));
@@ -30,7 +37,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', routes);
+//uploading
+app.use('/upload', upload);
+app.use('/mySchema', mySchema);
 
+var upload = require('./routes/upload.js');
+app.post('/upload', upload.post);
 
 
 // catch 404 and forward to error handler
