@@ -2,11 +2,7 @@
 var router = express.Router();
 var csv = require('fast-csv');
 var mongoose = require('mongoose');
-var Author = require('./mySchema');
-
-router.get('/', function (req, res) {
-    res.render('index');
-});
+var Author = require('./schemaP1');
 
 
 exports.post = function (req, res) {

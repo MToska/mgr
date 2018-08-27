@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var upload = require('./routes/upload');
-var mySchema = require('./routes/mySchema');
+var schemaP1= require('./routes/schemaP1');
 
 
 var app = express();
@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 //uploading
 app.use('/upload', upload);
-app.use('/mySchema', mySchema);
+app.use('/schemaP1', schemaP1);
 
 var upload = require('./routes/upload.js');
 app.post('/upload', upload.post);

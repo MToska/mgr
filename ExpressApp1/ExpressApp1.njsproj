@@ -35,7 +35,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes\index.js" />
-    <Compile Include="routes\mySchema.js">
+    <Compile Include="routes\schemaP1.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes\upload.js">

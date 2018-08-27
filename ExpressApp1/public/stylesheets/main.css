@@ -20,6 +20,7 @@
     text-decoration:none;
 }
 
+/*selection panel*/
 .selection-panel {
     display: inline-flex;
 }
@@ -49,17 +50,11 @@ h1 {
     width: 50%;
 }
 
+/*main-page*/
 .main-space {
     padding: 0 1.1em;
 }
 
-
-.add-db {
-    background-color: #9bf335;
-    border-color: #9bf335;
-    margin-right: 1em;
-    padding: 0.5em 1em;
-}
 
 .left-part,
 .right-part {
@@ -99,7 +94,7 @@ a {
     overflow-x: auto;
     width: 93em;
 }
-
+/*table*/
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -116,30 +111,36 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-
-/*addingdb*/
-.P1-button {
-    background-color: #9bf335;
-    border-color: #9bf335;
-}
-.P2-button {
-    background-color: #03A9F4;
-    border-color: #03A9F4;
+/*tooltip*/
+.tooltip {
+    position: relative;
+    display: inline-block;
 }
 
-.P1-button,
-.P2-button {
-    margin-right: 1em;
-    padding: 2em 4em;
-    margin: 12em 8em 0 18em;
-    color: #343a40;
-}
-.adding-P2,
-.adding-P1 {
-    width: 50%;
-    display: inline;
-}
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #939191;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+        font-size: 10px;
+    }
 
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+tr:target {
+    color: red!important;
+}
 
 .speed-group1,
 .speed-group2 {
