@@ -20,22 +20,40 @@
     text-decoration:none;
 }
 
+.selection-panel {
+    display: inline-flex;
+}
+.zone-selection {
+    display: inline-flex;
+}
+
+.zone1,
+.zone2 {
+        width: 50%;
+        margin-left: 2em;
+        background-color: #b6b4b4;
+        padding: 0.7em 0.7em;
+}
+
+
+.new-db {
+    margin-left: 63em;
+}
+
+
 h1 {
     font-size: 1.6em;
     color: #f5f2f2;
     padding: 0.8em 0 0.5em 0.2em;
     margin-top: 0;
-    width:50%;
+    width: 50%;
 }
 
 .main-space {
-    padding: 2.5em;
+    padding: 0 1.1em;
 }
 
-.new-db-button {
-    margin-top: 0;
-    text-align: right;
-}
+
 .add-db {
     background-color: #9bf335;
     border-color: #9bf335;
@@ -46,7 +64,7 @@ h1 {
 .left-part,
 .right-part {
     width: 50%;
-    display: table-cell;
+    display: initial;
 }
 
 .speed {
@@ -75,7 +93,7 @@ a {
 .first-zone,
 .second-zone {
     overflow-x: auto;
-    width: 58em;
+    width: 93em;
 }
 
 table {

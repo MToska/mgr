@@ -2,16 +2,29 @@
     <h1>Dobór głównych danych technologicznych</h1>
     <p class="menu"><a href="/parameters">Parametry COS</a></p>
 </div>
+<div class="selection-panel">
+    <div class="zone-selection">
+        <p class="zone1"><a href="/">Pasmo 1</a> </p>
+        <p class="zone2"><a href="/zone2">Pasmo 2</a></p>
+    </div>
+    <div class="new-db">
+        <form action="/" method="POST" encType="multipart/form-data">
+            <input type="file" name="file" accept="*.csv" /><br /><br />
+            <input type="submit" value="Upload" />
+        </form>
+    </div>
+</div>
+
 <section class="get">
     <div class="main-space">
-        <div class="new-db-button">
-            <form action="/" method="POST" encType="multipart/form-data">
-                <input type="file" name="file" accept="*.csv" /><br /><br />
-                <input type="submit" value="Upload" />
-            </form>
-        </div>
         <div class="left-part">
             <p class="speed">PRĘDKOŚĆ [m/min]</p>
+            <div class="buttons">
+                <button class="val butts"><a href="/v-06-zone1">0.6</a></button>
+                <button class="val butts"><a href="/v-08-zone1">0.8</a></button>
+                <button class="val butts"><a href="/v-1-zone1">1.0</a></button>
+                <button class="val butts"><a href="/v-12-zone1">1.2</a></button>
+            </div>
             <div class="speed-groups">
                 <form action="/index.js">
                     <div class="speed-group1">
@@ -22,17 +35,8 @@
                     </div>
                 </form>
             </div>
-            <div class="buttons">
-                <button class="val butts"><a href="/v-06">0.6</a></button>
-                <button class="val butts"><a href="/v-08">0.8</a></button>
-                <button class="val butts">1.0</button>
-                <button class="val butts">2.0</button>
-            </div>
-
-            <div>avg 1034 for 0.6: {{results.avgP2034}}</div>
         </div>
         <div class="right-part">
-            <p class="your-selection">Wybrany parametr: </p>
             <div class="zones">
                 <div class="first-zone">
                     <p>Pasmo 1</p>
@@ -261,237 +265,6 @@
                             <th>{{results.avgP1182}}</th>
                             <th>{{results.avgP1188}}</th>
                             <th>{{results.avgP1194}}</th>
-                        </tr>
-
-                    </table>
-                </div>
-                <div class="second-zone">
-                    <p>Pasmo 2</p>
-                    <table>
-                        <tr>
-                            <th>     </th>
-                            <th>P2034</th>
-                            <th>P2036</th>
-                            <th>P2058</th>
-                            <th>P2060</th>
-                            <th>P2062</th>
-                            <th>P2064</th>
-                            <th>P2104</th>
-                            <th>P2106</th>
-                            <th>P2108</th>
-                            <th>P2112</th>
-                            <th>P2114</th>
-                            <th>P2118</th>
-                            <th>P2120</th>
-                            <th>P2122</th>
-                            <th>P2124</th>
-                            <th>P2126</th>
-                            <th>P2128</th>
-                            <th>P2130</th>
-                            <th>P2132</th>
-                            <th>P2134</th>
-                            <th>P2136</th>
-                            <th>P2138</th>
-                            <th>P2140</th>
-                            <th>P2142</th>
-                            <th>P2144</th>
-                            <th>P2146</th>
-                            <th>P2148</th>
-                            <th>P2150</th>
-                            <th>P2152</th>
-                            <th>P2154</th>
-                            <th>P2156</th>
-                            <th>P2158</th>
-                            <th>P2160</th>
-                            <th>P2162</th>
-                            <th>P2164</th>
-                            <th>P2166</th>
-                            <th>P2168</th>
-                            <th>P2170</th>
-                            <th>P2172</th>
-                            <th>P2182</th>
-                            <th>P2188</th>
-                            <th>P2194</th>
-                        </tr>
-                        <tr>
-                            <th>       </th>
-                            <th>[m/min]</th>
-                            <th>[m/min]</th>
-                            <th>[mm]</th>
-                            <th>[mm]</th>
-                            <th>[mm]</th>
-                            <th>[mm]</th>
-                            <th>[m/min]</th>
-                            <th>[bar]</th>
-                            <th>[°C]</th>
-                            <th>[bar]</th>
-                            <th>[°C]</th>
-                            <th>[l/min]</th>
-                            <th>[l/min]</th>
-                            <th>[l/min]</th>
-                            <th>[l/min]</th>
-                            <th>[°C]</th>
-                            <th>[°C]</th>
-                            <th>[°C]</th>
-                            <th>[°C]</th>
-                            <th>[l/min]</th>
-                            <th>[l/min]</th>
-                            <th>[bar]</th>
-                            <th>[bar]</th>
-                            <th>[°C]</th>
-                            <th>[°C]</th>
-                            <th>[l/min]</th>
-                            <th>[bar]</th>
-                            <th>[l/min]</th>
-                            <th>[bar]</th>
-                            <th>[l/min]</th>
-                            <th>[bar]</th>
-                            <th>[l/min]</th>
-                            <th>[bar]</th>
-                            <th>[l/min]</th>
-                            <th>[bar]</th>
-                            <th>[l/min]</th>
-                            <th>[bar]</th>
-                            <th>[l/min]</th>
-                            <th>[bar]</th>
-                            <th>[°C]</th>
-                            <th>[°C]</th>
-                            <th>[m/min]</th>
-                        </tr>
-                        <tr>
-                            <th>Min</th>
-                            <th>{{results.minP2034}}</th>
-                            <th>{{results.minP2036}}</th>
-                            <th>{{results.minP2058}}</th>
-                            <th>{{results.minP2060}}</th>
-                            <th>{{results.minP2062}}</th>
-                            <th>{{results.minP2064}}</th>
-                            <th>{{results.minP2104}}</th>
-                            <th>{{results.minP2106}}</th>
-                            <th>{{results.minP2108}}</th>
-                            <th>{{results.minP2112}}</th>
-                            <th>{{results.minP2114}}</th>
-                            <th>{{results.minP2118}}</th>
-                            <th>{{results.minP2120}}</th>
-                            <th>{{results.minP2122}}</th>
-                            <th>{{results.minP2124}}</th>
-                            <th>{{results.minP2126}}</th>
-                            <th>{{results.minP2128}}</th>
-                            <th>{{results.minP2130}}</th>
-                            <th>{{results.minP2132}}</th>
-                            <th>{{results.minP2134}}</th>
-                            <th>{{results.minP2136}}</th>
-                            <th>{{results.minP2138}}</th>
-                            <th>{{results.minP2140}}</th>
-                            <th>{{results.minP2142}}</th>
-                            <th>{{results.minP2144}}</th>
-                            <th>{{results.minP2146}}</th>
-                            <th>{{results.minP2148}}</th>
-                            <th>{{results.minP2150}}</th>
-                            <th>{{results.minP2152}}</th>
-                            <th>{{results.minP2154}}</th>
-                            <th>{{results.minP2156}}</th>
-                            <th>{{results.minP2158}}</th>
-                            <th>{{results.minP2160}}</th>
-                            <th>{{results.minP2162}}</th>
-                            <th>{{results.minP2164}}</th>
-                            <th>{{results.minP2166}}</th>
-                            <th>{{results.minP2168}}</th>
-                            <th>{{results.minP2170}}</th>
-                            <th>{{results.minP2172}}</th>
-                            <th>{{results.minP2182}}</th>
-                            <th>{{results.minP2188}}</th>
-                            <th>{{results.minP2194}}</th>
-                        </tr>
-                        <tr>
-                            <th>Max</th>
-                            <th>{{results.maxP2034}}</th>
-                            <th>{{results.maxP2036}}</th>
-                            <th>{{results.maxP2058}}</th>
-                            <th>{{results.maxP2060}}</th>
-                            <th>{{results.maxP2062}}</th>
-                            <th>{{results.maxP2064}}</th>
-                            <th>{{results.maxP2104}}</th>
-                            <th>{{results.maxP2106}}</th>
-                            <th>{{results.maxP2108}}</th>
-                            <th>{{results.maxP2112}}</th>
-                            <th>{{results.maxP2114}}</th>
-                            <th>{{results.maxP2118}}</th>
-                            <th>{{results.maxP2120}}</th>
-                            <th>{{results.maxP2122}}</th>
-                            <th>{{results.maxP2124}}</th>
-                            <th>{{results.maxP2126}}</th>
-                            <th>{{results.maxP2128}}</th>
-                            <th>{{results.maxP2130}}</th>
-                            <th>{{results.maxP2132}}</th>
-                            <th>{{results.maxP2134}}</th>
-                            <th>{{results.maxP2136}}</th>
-                            <th>{{results.maxP2138}}</th>
-                            <th>{{results.maxP2140}}</th>
-                            <th>{{results.maxP2142}}</th>
-                            <th>{{results.maxP2144}}</th>
-                            <th>{{results.maxP2146}}</th>
-                            <th>{{results.maxP2148}}</th>
-                            <th>{{results.maxP2150}}</th>
-                            <th>{{results.maxP2152}}</th>
-                            <th>{{results.maxP2154}}</th>
-                            <th>{{results.maxP2156}}</th>
-                            <th>{{results.maxP2158}}</th>
-                            <th>{{results.maxP2160}}</th>
-                            <th>{{results.maxP2162}}</th>
-                            <th>{{results.maxP2164}}</th>
-                            <th>{{results.maxP2166}}</th>
-                            <th>{{results.maxP2168}}</th>
-                            <th>{{results.maxP2170}}</th>
-                            <th>{{results.maxP2172}}</th>
-                            <th>{{results.maxP2182}}</th>
-                            <th>{{results.maxP2188}}</th>
-                            <th>{{results.maxP2194}}</th>
-                        </tr>
-                        <tr>
-                            <th>Średnia</th>
-                            <th>{{results.avgP2034}}</th>
-                            <th>{{results.avgP2036}}</th>
-                            <th>{{results.avgP2058}}</th>
-                            <th>{{results.avgP2060}}</th>
-                            <th>{{results.avgP2062}}</th>
-                            <th>{{results.avgP2064}}</th>
-                            <th>{{results.avgP2104}}</th>
-                            <th>{{results.avgP2106}}</th>
-                            <th>{{results.avgP2108}}</th>
-                            <th>{{results.avgP2112}}</th>
-                            <th>{{results.avgP2114}}</th>
-                            <th>{{results.avgP2118}}</th>
-                            <th>{{results.avgP2120}}</th>
-                            <th>{{results.avgP2122}}</th>
-                            <th>{{results.avgP2124}}</th>
-                            <th>{{results.avgP2126}}</th>
-                            <th>{{results.avgP2128}}</th>
-                            <th>{{results.avgP2130}}</th>
-                            <th>{{results.avgP2132}}</th>
-                            <th>{{results.avgP2134}}</th>
-                            <th>{{results.avgP2136}}</th>
-                            <th>{{results.avgP2138}}</th>
-                            <th>{{results.avgP2140}}</th>
-                            <th>{{results.avgP2142}}</th>
-                            <th>{{results.avgP2144}}</th>
-                            <th>{{results.avgP2146}}</th>
-                            <th>{{results.avgP2148}}</th>
-                            <th>{{results.avgP2150}}</th>
-                            <th>{{results.avgP2152}}</th>
-                            <th>{{results.avgP2154}}</th>
-                            <th>{{results.avgP2156}}</th>
-                            <th>{{results.avgP2158}}</th>
-                            <th>{{results.avgP2160}}</th>
-                            <th>{{results.avgP2162}}</th>
-                            <th>{{results.avgP2164}}</th>
-                            <th>{{results.avgP2166}}</th>
-                            <th>{{results.avgP2168}}</th>
-                            <th>{{results.avgP2170}}</th>
-                            <th>{{results.avgP2172}}</th>
-                            <th>{{results.avgP2182}}</th>
-                            <th>{{results.avgP2188}}</th>
-                            <th>{{results.avgP2194}}</th>
                         </tr>
 
                     </table>
