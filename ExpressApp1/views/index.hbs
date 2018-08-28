@@ -18,21 +18,34 @@
 <section class="get">
     <div class="main-space">
         <div class="left-part">
-            <p class="speed">PRĘDKOŚĆ [m/min]</p>
-            <div class="buttons">
-                <button class="val butts"><a href="/v-06-zone1">0.6</a></button>
-                <button class="val butts"><a href="/v-08-zone1">0.8</a></button>
-                <button class="val butts"><a href="/v-1-zone1">1.0</a></button>
-                <button class="val butts"><a href="/v-12-zone1">1.2</a></button>
+            <div class="left-selection">
+                <div class="buttons">
+                    <p class="speed">PRĘDKOŚĆ [m/min]</p>
+                    <button class="val butts"><a href="/v-06-zone1">0.6</a></button>
+                    <button class="val butts"><a href="/v-08-zone1">0.8</a></button>
+                    <button class="val butts"><a href="/v-1-zone1">1.0</a></button>
+                    <button class="val butts"><a href="/v-12-zone1">1.2</a></button>
+                </div>
+                <div class="speed-groups">
+                    <form action="/index.js">
+                        <div class="speed-group1">
+                            <input type="radio" name="speed-groups" value="grupa1" id="grupa1" checked> Grupa 1<br>
+                        </div>
+                        <div class="speed-group2">
+                            <input type="radio" name="speed-groups" value="grupa2" id="grupa2"> Grupa 2<br>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="speed-groups">
-                <form action="/index.js">
-                    <div class="speed-group1">
-                        <input type="radio" name="speed-groups" value="grupa1" id="grupa1"> Grupa 1<br>
+            <div class="right-selection">
+                <form action="/">
+                    <p>Jakiego parametru poszukujesz?</p>
+                    <div class="help-tip">
+                        <p>This is the inline help tip! It can contain all kinds of HTML. Style it as you please.</p>
                     </div>
-                    <div class="speed-group2">
-                        <input type="radio" name="speed-groups" value="grupa2" id="grupa2"> Grupa 2<br>
-                    </div>
+                    <input type="text" id="searchparameter" value="P1034">
+                    <button type="button" onclick="myFunction()">Szukaj</button>
+                    <p id="receivedValue"></p>
                 </form>
             </div>
         </div>

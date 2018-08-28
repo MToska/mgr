@@ -4,10 +4,56 @@
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/stylesheets/main.css">
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("searchparameter");
+            var searchedParameter = x.value;
+            if (document.location.pathname == '/v-06-zone1') {
+                if (searchedParameter == 'P1034') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" + 
+                        "Min: " + "{{results.minP1034}} <br>" +
+                        "Max: " + "{{results.maxP1034}} <br>" +
+                        "Średnia: " + "{{results.avgP1034}}";
+                } else if (searchedParameter == 'P1036') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP1036}} <br>" +
+                        "Max: " + "{{results.maxP1036}} <br>" +
+                        "Średnia: " + "{{results.avgP1036}}";
+                } else if (searchedParameter == 'P1058') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP1058}} <br>" +
+                        "Max: " + "{{results.maxP1058}} <br>" +
+                        "Średnia: " + "{{results.avgP1058}}";
+                } else if (searchedParameter == 'P10') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP1058}} <br>" +
+                        "Max: " + "{{results.maxP1058}} <br>" +
+                        "Średnia: " + "{{results.avgP1058}}";
+                }
+
+
+
+            } else {
+                alert('ups');
+            }
+
+        }
+
+
+
+
+
+    </script>
 </head>
 <body>
     {{{ body }}}
 </body>
+
 
 
 
