@@ -21,18 +21,18 @@
             <div class="left-selection">
                 <div class="buttons">
                     <p class="speed">PRĘDKOŚĆ [m/min]</p>
-                    <button class="val butts"><a href="/v-06-zone1">0.6</a></button>
-                    <button class="val butts"><a href="/v-08-zone1">0.8</a></button>
-                    <button class="val butts"><a href="/v-1-zone1">1.0</a></button>
-                    <button class="val butts"><a href="/v-12-zone1">1.2</a></button>
+                    <button class="val butts"><a id="v-06-zone1">0.6</a></button>
+                    <button class="val butts"><a id="v-08-zone1">0.8</a></button>
+                    <button class="val butts"><a id="v-1-zone1">1.0</a></button>
+                    <button class="val butts"><a id="v-12-zone1">1.2</a></button>
                 </div>
                 <div class="speed-groups">
-                    <form action="/index.js">
+                    <form action="/index.js" name="sg">
                         <div class="speed-group1">
-                            <input type="radio" name="speed-groups" value="grupa1" id="grupa1" checked> Grupa 1<br>
+                            <input type="radio" name="speed-groups" value="zone1group1" id="zone1group1"> Grupa 1<br>
                         </div>
                         <div class="speed-group2">
-                            <input type="radio" name="speed-groups" value="grupa2" id="grupa2"> Grupa 2<br>
+                            <input type="radio" name="speed-groups" value="zone1group2" id="zone1group2"> Grupa 2<br>
                         </div>
                     </form>
                 </div>
@@ -502,3 +502,5 @@
 
     </div>
 </section>
+
+

@@ -4,36 +4,71 @@
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+    {{{ body }}}
+
+
+
+
     <script>
 
+        var radios = document.forms["sg"].elements["speed-groups"];
+        for (radio in radios) {
+            radios[radio].onclick = function () {
+                if (this.value == 'zone1group1') {
+                    //redirections for group1 zone 1
+                    var v06zone1G1 = document.getElementById('v-06-zone1'); 
+                    v06zone1G1.href = "/v-06-zone1";
+
+                    var v08zone1G1 = document.getElementById('v-08-zone1');
+                    v08zone1G1.href = "/v-08-zone1";
+
+                    var v1zone1G1 = document.getElementById('v-1-zone1');
+                    v1zone1G1.href = "/v-1-zone1";
+
+                    var v12zone1G1 = document.getElementById('v-12-zone1');
+                    v12zone1G1.href = "/v-12-zone1";
+
+                } else if (this.value == 'zone1group2') {
+                    alert(this.value);
+                } else if (this.value == 'zone2group1') {
+                    //redirections for group1 zone 2
+                    var v06zone2G1 = document.getElementById('v-06-zone2');
+                    v06zone2G1.href = "/v-06-zone2";
+
+                    var v08zone2G1 = document.getElementById('v-08-zone2');
+                    v08zone2G1.href = "/v-08-zone2";
+
+                    var v1zone2G1 = document.getElementById('v-1-zone2');
+                    v1zone2G1.href = "/v-1-zone2";
+
+                    var v12zone2G1 = document.getElementById('v-12-zone2');
+                    v12zone2G1.href = "/v-12-zone2";
+
+                } else if (this.value == 'zone2group2') {
+                    alert(this.value);
+                } else {
+                    alert("Wybierz grupę");
+                }
+               
+            }
+        }
+
+        /*
         function myFunction() {
             var x = document.getElementById("searchparameter");
             var searchedParameter = x.value;
+            var myparam = "resultsmin." + x.value;
+            var mypara = "{{" + myparam + "}}";
+
             if (document.location.pathname == '/v-06-zone1') {
                 if (searchedParameter == 'P1034') {
                     document.getElementById("receivedValue").innerHTML =
-                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" + 
+                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
                         "Min: " + "{{results.minP1034}} <br>" +
                         "Max: " + "{{results.maxP1034}} <br>" +
                         "Średnia: " + "{{results.avgP1034}}";
-                } else if (searchedParameter == 'P1036') {
-                    document.getElementById("receivedValue").innerHTML =
-                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
-                        "Min: " + "{{results.minP1036}} <br>" +
-                        "Max: " + "{{results.maxP1036}} <br>" +
-                        "Średnia: " + "{{results.avgP1036}}";
-                } else if (searchedParameter == 'P1058') {
-                    document.getElementById("receivedValue").innerHTML =
-                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
-                        "Min: " + "{{results.minP1058}} <br>" +
-                        "Max: " + "{{results.maxP1058}} <br>" +
-                        "Średnia: " + "{{results.avgP1058}}";
-                } else if (searchedParameter == 'P10') {
-                    document.getElementById("receivedValue").innerHTML =
-                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
-                        "Min: " + "{{results.minP1058}} <br>" +
-                        "Max: " + "{{results.maxP1058}} <br>" +
-                        "Średnia: " + "{{results.avgP1058}}";
                 }
 
 
@@ -41,20 +76,11 @@
             } else {
                 alert('ups');
             }
-
         }
-
-
-
-
-
+        */
     </script>
-</head>
-<body>
-    {{{ body }}}
 </body>
 
 
 
-
-</html>
+</html >
