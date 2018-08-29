@@ -19,15 +19,17 @@
     <div class="main-space">
         <div class="left-part">
             <div class="left-selection">
-                <div class="buttons">
-                    <p class="speed">PRĘDKOŚĆ [m/min]</p>
-                    <button class="val butts" value="0.6" id="butt"><a id="v-06-zone1">0.6</a></button>
-                    <button class="val butts"><a id="v-08-zone1">0.8</a></button>
-                    <button class="val butts"><a id="v-1-zone1">1.0</a></button>
-                    <button class="val butts"><a id="v-12-zone1">1.2</a></button>
-                </div>
                 <div class="speed-groups">
-                    <form action="/index.js" name="sg">
+                    <div class="tooltip-for-groups">
+                        <p>Wybierz grupę według której chcesz wyszukać parametr</p>
+                        <div class="help-tip">
+                            <p>
+                                Grupa 1: Prędkość odlewania grupa 1 [P1034]<br />
+                                Grupa 2: Prędkość odlewania grupa 2 [P1036]
+                            </p>
+                        </div>
+                    </div>
+                   <form action="/index.js" name="sg">
                         <div class="speed-group1">
                             <input type="radio" name="speed-groups" value="zone1group1" id="zone1group1"> Grupa 1<br>
                         </div>
@@ -36,15 +38,28 @@
                         </div>
                     </form>
                 </div>
+                <div class="buttons">
+                    <p class="speed">PRĘDKOŚĆ [m/min]</p>
+                    <button class="val butts" value="0.6" id="butt-P1-0.6"><a id="v-06-zone1">0.6</a></button>
+                    <button class="val butts" value="0.8" id="butt-P1-0.8"><a id="v-08-zone1">0.8</a></button>
+                    <button class="val butts" value="1.0" id="butt-P1-1.0"><a id="v-1-zone1">1.0</a></button>
+                    <button class="val butts" value="1.2" id="butt-P1-1.2"><a id="v-12-zone1">1.2</a></button>
+                </div>
             </div>
             <div class="right-selection">
                 <form action="/">
-                    <p>Jakiego parametru poszukujesz?</p>
-                    <div class="help-tip">
-                        <p>This is the inline help tip! It can contain all kinds of HTML. Style it as you please.</p>
+                    <div class="tooltip-section">
+                        <div class="tooltip-header">
+                            <p>Jakiego parametru poszukujesz?</p>
+                        </div>
+                        <div class="help-tip">
+                            <p>Chcesz dowiedzieć się więcej o parametrach znajdujących się w naszej bazie? <a href="/parameters" class="tooltip-link">Kliknij tutaj</a></p>
+                        </div>
                     </div>
+
+
                     <input type="text" id="searchparameter" value="P1034">
-                    <button type="button" onclick="myFunction()" id="tes">Szukaj</button>
+                    <button type="button" onclick="myFunction()" id="tes" class="searchText-button">Szukaj</button>
                     <p id="receivedValue"></p>
                 </form>
             </div>

@@ -61,7 +61,6 @@ h1 {
 
 .left-part,
 .right-part {
-    width: 50%;
     display: inline-flex;
 }
 
@@ -86,10 +85,6 @@ a {
 
 .parametrycos {
     color: #bbb4b4;
-}
-
-.right-part {
-    padding-left: 6em;
 }
 
 .first-zone,
@@ -157,6 +152,18 @@ tr:target {
 }
 /*parameters*/
 
+
+
+/* search textfield  */
+    
+    .searchText-button {
+    background-color: #8fe42d;
+    border-color: #8fe42d;
+    padding: 0.4em 0.8em;
+    }
+
+
+
 /*inline help tips*/
 
 .help-tip {
@@ -169,6 +176,7 @@ tr:target {
     font-size: 14px;
     line-height: 26px;
     cursor: default;
+    margin-left: 18em;
 }
 
     .help-tip:before {
@@ -189,7 +197,7 @@ tr:target {
         text-align: left;
         background-color: #1E2021;
         padding: 20px;
-        width: 300px;
+        width: 250px;
         position: absolute;
         border-radius: 3px;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -241,4 +249,9 @@ tr:target {
     100% {
         opacity: 100%;
     }
+}
+
+/*link inside the tooltip*/
+.tooltip-link {
+    color:red;
 }

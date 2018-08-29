@@ -78,9 +78,8 @@
             var x = document.getElementById("searchparameter");
             var searchedParameter = x.value;
 
-            if (document.location.pathname == '/v-06-zone1') {
-                var speed = document.getElementById("butt");
-                var speedValue = speed.value;
+           //function which generates response for P1
+            var  searchByTextFieldP1 = function() {
                 if (searchedParameter == 'P1034') {
                     document.getElementById("receivedValue").innerHTML =
                         "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
@@ -337,6 +336,388 @@
                     alert('Niestety nasza baza nie zawiera informacji o takim parametrze');
                 }
             }
+
+           //function which generates response for P2
+            var searchByTextFieldP2 = function () {
+                if (searchedParameter == 'P2034') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2034}} <br>" +
+                        "Max: " + "{{results.maxP2034}} <br>" +
+                        "Średnia: " + "{{results.avgP2034}}";
+                } else if (searchedParameter == 'P2036') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2036}} <br>" +
+                        "Max: " + "{{results.maxP2036}} <br>" +
+                        "Średnia: " + "{{results.avgP2036}}";
+                } else if (searchedParameter == 'P2058') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2058}} <br>" +
+                        "Max: " + "{{results.maxP2058}} <br>" +
+                        "Średnia: " + "{{results.avgP2058}}";
+                } else if (searchedParameter == 'P2060') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2060}} <br>" +
+                        "Max: " + "{{results.maxP2060}} <br>" +
+                        "Średnia: " + "{{results.avgP2060}}";
+                } else if (searchedParameter == 'P2062') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2062}} <br>" +
+                        "Max: " + "{{results.maxP2062}} <br>" +
+                        "Średnia: " + "{{results.avgP2062}}";
+                } else if (searchedParameter == 'P2064') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2064}} <br>" +
+                        "Max: " + "{{results.maxP2064}} <br>" +
+                        "Średnia: " + "{{results.avgP2064}}";
+                } else if (searchedParameter == 'P2104') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2104}} <br>" +
+                        "Max: " + "{{results.maxP2104}} <br>" +
+                        "Średnia: " + "{{results.avgP2104}}";
+                } else if (searchedParameter == 'P2106') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2106}} <br>" +
+                        "Max: " + "{{results.maxP2106}} <br>" +
+                        "Średnia: " + "{{results.avgP2106}}";
+                } else if (searchedParameter == 'P2108') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2108}} <br>" +
+                        "Max: " + "{{results.maxP2108}} <br>" +
+                        "Średnia: " + "{{results.avgP2108}}";
+                } else if (searchedParameter == 'P2112') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2112}} <br>" +
+                        "Max: " + "{{results.maxP2112}} <br>" +
+                        "Średnia: " + "{{results.avgP2112}}";
+                } else if (searchedParameter == 'P2114') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2114}} <br>" +
+                        "Max: " + "{{results.maxP2114}} <br>" +
+                        "Średnia: " + "{{results.avgP2114}}";
+                } else if (searchedParameter == 'P2118') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2118}} <br>" +
+                        "Max: " + "{{results.maxP2118}} <br>" +
+                        "Średnia: " + "{{results.avgP2118}}";
+                } else if (searchedParameter == 'P2120') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2120}} <br>" +
+                        "Max: " + "{{results.maxP2120}} <br>" +
+                        "Średnia: " + "{{results.avgP2120}}";
+                } else if (searchedParameter == 'P2120') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2122}} <br>" +
+                        "Max: " + "{{results.maxP2122}} <br>" +
+                        "Średnia: " + "{{results.avgP2122}}";
+                } else if (searchedParameter == 'P2124') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2124}} <br>" +
+                        "Max: " + "{{results.maxP2124}} <br>" +
+                        "Średnia: " + "{{results.avgP2124}}";
+                } else if (searchedParameter == 'P2126') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości 0.6[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2126}} <br>" +
+                        "Max: " + "{{results.maxP2126}} <br>" +
+                        "Średnia: " + "{{results.avgP2126}}";
+                } else if (searchedParameter == 'P2128') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2128}} <br>" +
+                        "Max: " + "{{results.maxP2128}} <br>" +
+                        "Średnia: " + "{{results.avgP2128}}";
+                } else if (searchedParameter == 'P2130') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2130}} <br>" +
+                        "Max: " + "{{results.maxP2130}} <br>" +
+                        "Średnia: " + "{{results.avgP2130}}";
+                } else if (searchedParameter == 'P2132') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2132}} <br>" +
+                        "Max: " + "{{results.maxP2132}} <br>" +
+                        "Średnia: " + "{{results.avgP2132}}";
+                } else if (searchedParameter == 'P2134') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2134}} <br>" +
+                        "Max: " + "{{results.maxP2134}} <br>" +
+                        "Średnia: " + "{{results.avgP2134}}";
+                } else if (searchedParameter == 'P2136') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2136}} <br>" +
+                        "Max: " + "{{results.maxP2136}} <br>" +
+                        "Średnia: " + "{{results.avgP2136}}";
+                } else if (searchedParameter == 'P2138') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2138}} <br>" +
+                        "Max: " + "{{results.maxP2138}} <br>" +
+                        "Średnia: " + "{{results.avgP2138}}";
+                } else if (searchedParameter == 'P2140') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2140}} <br>" +
+                        "Max: " + "{{results.maxP2140}} <br>" +
+                        "Średnia: " + "{{results.avgP2140}}";
+                } else if (searchedParameter == 'P2142') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2142}} <br>" +
+                        "Max: " + "{{results.maxP2142}} <br>" +
+                        "Średnia: " + "{{results.avgP2142}}";
+                } else if (searchedParameter == 'P2144') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2144}} <br>" +
+                        "Max: " + "{{results.maxP2144}} <br>" +
+                        "Średnia: " + "{{results.avgP2144}}";
+                } else if (searchedParameter == 'P2146') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2146}} <br>" +
+                        "Max: " + "{{results.maxP2146}} <br>" +
+                        "Średnia: " + "{{results.avgP2146}}";
+                } else if (searchedParameter == 'P2148') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2148}} <br>" +
+                        "Max: " + "{{results.maxP2148}} <br>" +
+                        "Średnia: " + "{{results.avgP2148}}";
+                } else if (searchedParameter == 'P2150') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2150}} <br>" +
+                        "Max: " + "{{results.maxP2150}} <br>" +
+                        "Średnia: " + "{{results.avgP2150}}";
+                } else if (searchedParameter == 'P2152') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2152}} <br>" +
+                        "Max: " + "{{results.maxP2152}} <br>" +
+                        "Średnia: " + "{{results.avgP2152}}";
+                } else if (searchedParameter == 'P2154') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2154}} <br>" +
+                        "Max: " + "{{results.maxP2154}} <br>" +
+                        "Średnia: " + "{{results.avgP2154}}";
+                } else if (searchedParameter == 'P2156') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.min21156}} <br>" +
+                        "Max: " + "{{results.maxP2156}} <br>" +
+                        "Średnia: " + "{{results.avgP2156}}";
+                } else if (searchedParameter == 'P2158') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2158}} <br>" +
+                        "Max: " + "{{results.maxP2158}} <br>" +
+                        "Średnia: " + "{{results.avgP2158}}";
+                } else if (searchedParameter == 'P2160') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2160}} <br>" +
+                        "Max: " + "{{results.maxP2160}} <br>" +
+                        "Średnia: " + "{{results.avgP2160}}";
+                } else if (searchedParameter == 'P2162') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2162}} <br>" +
+                        "Max: " + "{{results.maxP2162}} <br>" +
+                        "Średnia: " + "{{results.avgP2162}}";
+                } else if (searchedParameter == 'P2164') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2164}} <br>" +
+                        "Max: " + "{{results.maxP2164}} <br>" +
+                        "Średnia: " + "{{results.avgP2164}}";
+                } else if (searchedParameter == 'P2166') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2166}} <br>" +
+                        "Max: " + "{{results.maxP2166}} <br>" +
+                        "Średnia: " + "{{results.avgP2166}}";
+                } else if (searchedParameter == 'P2168') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2168}} <br>" +
+                        "Max: " + "{{results.maxP2168}} <br>" +
+                        "Średnia: " + "{{results.avgP2168}}";
+                } else if (searchedParameter == 'P2170') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2170}} <br>" +
+                        "Max: " + "{{results.maxP2170}} <br>" +
+                        "Średnia: " + "{{results.avgP2170}}";
+                } else if (searchedParameter == 'P2172') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2172}} <br>" +
+                        "Max: " + "{{results.maxP2172}} <br>" +
+                        "Średnia: " + "{{results.avgP2172}}";
+                } else if (searchedParameter == 'P2182') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2182}} <br>" +
+                        "Max: " + "{{results.maxP2182}} <br>" +
+                        "Średnia: " + "{{results.avgP2182}}";
+                } else if (searchedParameter == 'P2188') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2188}} <br>" +
+                        "Max: " + "{{results.maxP2188}} <br>" +
+                        "Średnia: " + "{{results.avgP2188}}";
+                } else if (searchedParameter == 'P2194') {
+                    document.getElementById("receivedValue").innerHTML =
+                        "Wartość parametru " + x.value + " dla prędkości " + speed.value + "[m/min] wynoszą<br>" +
+                        "Min: " + "{{results.minP2194}} <br>" +
+                        "Max: " + "{{results.maxP2194}} <br>" +
+                        "Średnia: " + "{{results.avgP2194}}";
+                } else {
+                    alert('Niestety nasza baza nie zawiera informacji o takim parametrze');
+                }
+            }
+
+            ////////////P1
+            /////G1
+            //Zone 1, G1, speed 0.6
+            if (document.location.pathname == '/v-06-zone1') {
+                var speed = document.getElementById("butt-P1-0.6");
+                var speedValue = speed.value;
+                searchByTextFieldP1();
+            }
+
+            //Zone 1, G1, speed 0.8
+            if (document.location.pathname == '/v-08-zone1') {
+                var speed = document.getElementById("butt-P1-0.8");
+                var speedValue = speed.value;
+                searchByTextFieldP1();
+            }
+
+            //Zone 1, G1, speed 1.0
+            if (document.location.pathname == '/v-1-zone1') {
+                var speed = document.getElementById("butt-P1-1.0");
+                var speedValue = speed.value;
+                searchByTextFieldP1();
+            }
+
+            //Zone 1, G1, speed 1.2
+            if (document.location.pathname == '/v-12-zone1') {
+                var speed = document.getElementById("butt-P1-1.2");
+                var speedValue = speed.value;
+                searchByTextFieldP1();
+            }
+
+            /////G2
+            //Zone 1, G2, speed 0.6
+            if (document.location.pathname == '/v-06-zone1-G2') {
+                var speed = document.getElementById("butt-P1-0.6");
+                var speedValue = speed.value;
+                searchByTextFieldP1();
+            }
+
+            //Zone 1, G2, speed 0.8
+            if (document.location.pathname == '/v-08-zone1-G2') {
+                var speed = document.getElementById("butt-P1-0.8");
+                var speedValue = speed.value;
+                searchByTextFieldP1();
+            }
+
+            //Zone 1, G2, speed 1.0
+            if (document.location.pathname == '/v-1-zone1-G2') {
+                var speed = document.getElementById("butt-P1-1.0");
+                var speedValue = speed.value;
+                searchByTextFieldP1();
+            }
+
+            //Zone 1, G2, speed 1.2
+            if (document.location.pathname == '/v-12-zone1-G2') {
+                var speed = document.getElementById("butt-P1-1.2");
+                var speedValue = speed.value;
+                searchByTextFieldP1();
+            }
+
+            ////////////P2
+            /////G1
+            //Zone 1, G1, speed 0.6
+            if (document.location.pathname == '/v-06-zone2') {
+                var speed = document.getElementById("butt-P2-0.6");
+                var speedValue = speed.value;
+                searchByTextFieldP2();
+            }
+
+            //Zone 1, G1, speed 0.8
+            if (document.location.pathname == '/v-08-zone2') {
+                var speed = document.getElementById("butt-P2-0.8");
+                var speedValue = speed.value;
+                searchByTextFieldP2();
+            }
+
+            //Zone 1, G1, speed 1.0
+            if (document.location.pathname == '/v-1-zone2') {
+                var speed = document.getElementById("butt-P2-1.0");
+                var speedValue = speed.value;
+                searchByTextFieldP2();
+            }
+
+            //Zone 1, G1, speed 1.2
+            if (document.location.pathname == '/v-12-zone2') {
+                var speed = document.getElementById("butt-P2-1.2");
+                var speedValue = speed.value;
+                searchByTextFieldP2();
+            }
+
+            /////G2
+            //Zone 1, G2, speed 0.6
+            if (document.location.pathname == '/v-06-zone2-G2') {
+                var speed = document.getElementById("butt-P2-0.6");
+                var speedValue = speed.value;
+                searchByTextFieldP2();
+            }
+
+            //Zone 1, G2, speed 0.8
+            if (document.location.pathname == '/v-08-zone2-G2') {
+                var speed = document.getElementById("butt-P2-0.8");
+                var speedValue = speed.value;
+                searchByTextFieldP2();
+            }
+
+            //Zone 1, G2, speed 1.0
+            if (document.location.pathname == '/v-1-zone2-G2') {
+                var speed = document.getElementById("butt-P2-1.0");
+                var speedValue = speed.value;
+                searchByTextFieldP2();
+            }
+
+            //Zone 1, G2, speed 1.2
+            if (document.location.pathname == '/v-12-zone2-G2') {
+                var speed = document.getElementById("butt-P2-1.2");
+                var speedValue = speed.value;
+                searchByTextFieldP2();
+            }
+
+
+
+
+
         }
 
     </script>
