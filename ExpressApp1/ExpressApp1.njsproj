@@ -42,9 +42,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Content Include="package.json" />
+    <Content Include="public\stylesheets\Groups.PNG" />
     <Content Include="public\stylesheets\icon.png" />
     <Content Include="public\stylesheets\main.css" />
+    <Content Include="public\stylesheets\zones.PNG" />
     <Content Include="README.md" />
+    <Content Include="views\instruction.hbs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\newdb.hbs">
       <SubType>Code</SubType>
     </Content>

@@ -20,13 +20,18 @@ router.get('/zone2', function (req, res) {
     res.render('zone2');
 });
 
+router.get('/instruction', function (req, res) {
+    res.render('instruction');
+});
+
 // Group1
 //P1 speed: 0.6
 router.get('/v-06-zone1', function (req, res) {
         MongoClient.connect(url, (err, client) => {
             var db = client.db('my_mgr');
-            
-                var results = db.collection('P1').aggregate(
+            var xx = 'P1';
+
+                var results = db.collection(xx).aggregate(
                     [
                         { $match: { P1034: { $gt: 0.6, $lt: 0.7 } } },
                         {

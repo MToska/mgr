@@ -1,20 +1,35 @@
 ﻿<div class="navbar">
-    <h1>Dobór głównych danych technologicznych</h1>
+    <h1>Dobór głównych danych technologicznych procesu COS</h1>
     <p class="menu"><a href="/parameters" class="parametrycos">Parametry COS</a></p>
+</div>
+<div class="sequence-selection">
+    <p>Wybierz sekwencje i pasmo</p>
+    <form action="/" class="sequence-form">
+        <select name="cars" class="select-sequence">
+            <option value="17193_P1">17193_P1</option>
+            <option value="17193_P2">17193_P2</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
 </div>
 <div class="selection-panel">
     <div class="zone-selection">
         <p class="zone1"><a href="/">Pasmo 1</a> </p>
         <p class="zone2"><a href="/zone2">Pasmo 2</a></p>
+        <div class="help-tip help-tip-zones">
+            <p>
+                <img src="./stylesheets/zones.png" class="zones-selection-tooltip" />
+            </p>
+        </div>
     </div>
     <div class="new-db">
-        <form action="/" method="POST" encType="multipart/form-data">
+        <form action="/" method="POST" encType="multipart/form-data" class="upload-style">
             <input type="file" name="file" accept="*.csv" /><br /><br />
-            <input type="submit" value="Upload" />
+            <input type="submit" value="Upload" class="submit-new-file" id="mine" />
         </form>
     </div>
 </div>
-
 <section class="get">
     <div class="main-space">
         <div class="left-part">
@@ -24,12 +39,13 @@
                         <p>Wybierz grupę według której chcesz wyszukać parametr</p>
                         <div class="help-tip">
                             <p>
-                                Grupa 1: Prędkość odlewania grupa 1 [P1034]<br />
-                                Grupa 2: Prędkość odlewania grupa 2 [P1036]
+                                Grupa 1: Miejsce pomiaru grupy 1<br />
+                                Grupa 2: Miejsce pomiaru grupy 2<br />
+                                <img src="./stylesheets/Groups.PNG" class="group-selection-tooltip" />
                             </p>
                         </div>
                     </div>
-                   <form action="/index.js" name="sg">
+                    <form action="/index.js" name="sg">
                         <div class="speed-group1">
                             <input type="radio" name="speed-groups" value="zone1group1" id="zone1group1"> Grupa 1<br>
                         </div>
@@ -67,20 +83,20 @@
         <div class="right-part">
             <div class="zones">
                 <div class="first-zone">
-                    <p>Pasmo 1</p>
+                    <p class="current-selections">Pasmo 1</p>
                     <table>
                         <tr>
                             <th></th>
-                            <th> 
+                            <th>
                                 <div class="tooltip">
                                     <a href="/parameters#P1034">P1034</a>
-                                    <span class="tooltiptext">Pręd. odlewania Gr.1. [Kliknij po więcej informacji]</span>
+                                    <span class="tooltiptext">Prędkość odlewania Gr.1. [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
                                 <div class="tooltip">
                                     <a href="/parameters#P1036">P1036</a>
-                                    <span class="tooltiptext">Pręd. odlewania Gr.2. [Kliknij po więcej informacji]</span>
+                                    <span class="tooltiptext">Prędkość odlewania Gr.2. [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
@@ -174,38 +190,38 @@
                                 </div>
                             </th>
                             <th>
-                                
+
                                 <div class="tooltip">
                                     <a href="/parameters#P1130">P1130</a>
                                     <span class="tooltiptext">Zmiana temperatury wody w krystalizatorze, delta T, ściana lewaa [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
-                                 <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1132">P1132</a>
                                     <span class="tooltiptext">Zmiana temperatury wody w krystalizatorze, delta T, ściana prawa [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
-                                 <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1134">P1134</a>
                                     <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 1-3 [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
-                                  <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1136">P1136</a>
                                     <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 4-7 [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
-                                 <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1138">P1138</a>
                                     <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 1-3 [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
-                                 <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1140">P1140</a>
                                     <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 4-7 [Kliknij po więcej informacji]</span>
                                 </div>
@@ -217,33 +233,33 @@
                                 </div>
                             </th>
                             <th>
-                                
+
                                 <div class="tooltip">
                                     <a href="/parameters#P1144">P1144</a>
                                     <span class="tooltiptext">Temperatura wody chłodzącej natryskowej, zasilanie strefy 4-7 [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
-                                 <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1146">P1146</a>
                                     <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 1 [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
-                                
+
                                 <div class="tooltip">
                                     <a href="/parameters#P1148">P1148</a>
                                     <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 1 [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
-                                 <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1150">P1150</a>
                                     <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 2 [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
                             <th>
-                                
+
                                 <div class="tooltip">
                                     <a href="/parameters#P1152">P1152</a>
                                     <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 2 [Kliknij po więcej informacji]</span>
@@ -256,7 +272,7 @@
                                 </div>
                             </th>
                             <th>
-                                  <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1156">P1156</a>
                                     <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 3 [Kliknij po więcej informacji]</span>
                                 </div>
@@ -273,7 +289,7 @@
                                     <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 4 [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
-                            <th>                            
+                            <th>
                                 <div class="tooltip">
                                     <a href="/parameters#P1162">P1162</a>
                                     <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 5 [Kliknij po więcej informacji]</span>
@@ -292,7 +308,7 @@
                                 </div>
                             </th>
                             <th>
-                                 <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1168">P1168</a>
                                     <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 7 [Kliknij po więcej informacji]</span>
                                 </div>
@@ -310,12 +326,12 @@
                                 </div>
                             </th>
                             <th>
-                                 <div class="tooltip">
+                                <div class="tooltip">
                                     <a href="/parameters#P1182">P1182</a>
                                     <span class="tooltiptext">Temperatura wody powrotnej chłodzenia maszyny [Kliknij po więcej informacji]</span>
                                 </div>
                             </th>
-                            <th> 
+                            <th>
                                 <div class="tooltip">
                                     <a href="/parameters#P1188">P1188</a>
                                     <span class="tooltiptext">Temperatura ciekłej stali w kadzi pośredniej [Kliknij po więcej informacji]</span>

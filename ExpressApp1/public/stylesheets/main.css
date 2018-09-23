@@ -4,6 +4,23 @@
     font-family: sans-serif;
 }
 
+h1 {
+    font-size: 1.6em;
+    color: #f5f2f2;
+    padding: 0.8em 0 0.5em 0.2em;
+    margin-top: 0;
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    font-weight: bold;
+}
+
 .navbar {
     background-color: #343a40;
     margin-top: 0;
@@ -18,6 +35,21 @@
     text-align: right;
     padding-right: 0.7em;
     text-decoration:none;
+}
+
+
+/*main-page*/
+.main-space {
+    padding: 0 1.1em;
+}
+
+.right-selection {
+    margin: 2em 0 0 15em;
+}
+
+.left-part,
+.right-part {
+    display: inline-flex;
 }
 
 /*selection panel*/
@@ -36,37 +68,49 @@
         padding: 0.7em 0.7em;
 }
 
+.first-zone,
+.second-zone {
+    overflow-x: auto;
+    width: 93em;
+}
 
+/*sequence selection*/
+.sequence-selection {
+    margin:2em 0 1em 1.1em;
+}
+.sequence-form {
+    display:inline-flex;
+}
+.select-sequence {
+    height: 2em;
+    margin-right: 1em;
+}
+input[type="submit"] {
+    height: 2em;
+    background-color: #8fe42d;
+    border-color: #8fe42d;
+}
+
+
+
+/*uploading files*/
 .new-db {
     margin-left: 63em;
 }
-
-
-h1 {
-    font-size: 1.6em;
-    color: #f5f2f2;
-    padding: 0.8em 0 0.5em 0.2em;
-    margin-top: 0;
-    width: 50%;
+.upload-style {
+    margin-top: 0.6em;
 }
 
-/*main-page*/
-.main-space {
-    padding: 0 1.1em;
+.submit-new-file {
+    background-color: #FF9800;
+    border-color: #FF9800;
+    padding: 0.3em 0.5em;
 }
 
-.right-selection {
-    margin: 2em 0 0 15em;
-}
 
-.left-part,
-.right-part {
-    display: inline-flex;
-}
 
-.speed {
-    font-size: 1.5em;
-}
+
+
 
 .val {
     background-color: #03A9F4;
@@ -78,66 +122,14 @@ h1 {
     padding: 0.5em 1em;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
 .parametrycos {
     color: #bbb4b4;
 }
 
-.first-zone,
-.second-zone {
-    overflow-x: auto;
-    width: 93em;
-}
-/*table*/
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-/*tooltip*/
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: #939191;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-        /* Position the tooltip */
-        position: absolute;
-        z-index: 1;
-        bottom: 100%;
-        left: 50%;
-        margin-left: -60px;
-        font-size: 10px;
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-    }
-
-tr:target {
-    color: red!important;
+/*speed groups*/
+.speed {
+    font-size: 1.5em;
 }
 
 .speed-groups {
@@ -197,14 +189,15 @@ tr:target {
         text-align: left;
         background-color: #1E2021;
         padding: 20px;
-        width: 250px;
+        width: 300px;
         position: absolute;
         border-radius: 3px;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-        right: -4px;
+        right: -50px;
         color: #FFF;
         font-size: 13px;
         line-height: 1.4;
+        z-index: 2;
     }
 
         .help-tip p:before { /* The pointer of the tooltip */
@@ -226,6 +219,24 @@ tr:target {
             top: -40px;
             left: 0;
         }
+
+    /*zone tolltip*/
+.help-tip-zones {
+    margin-top: 1.5em;
+    margin-left: 19em;
+}
+.zones-selection-tooltip {
+    padding-top: 10px;
+    height: 300px;
+    width: 200px;
+    margin-left: 3em;
+}
+/*groups tolltip*/
+.group-selection-tooltip {
+    padding-top: 10px;
+    height: 230px;
+    width: 300px;
+}
 
 /* CSS animation */
 
@@ -254,4 +265,60 @@ tr:target {
 /*link inside the tooltip*/
 .tooltip-link {
     color:red;
+}
+
+
+/*current status before table*/
+.current-selections {
+    font-size: 1.5em;
+    color: #ed2b2b;
+}
+
+
+/*table*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/*tooltip in the table*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #939191;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+        font-size: 10px;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+tr:target {
+    color: red !important;
 }

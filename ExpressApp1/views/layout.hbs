@@ -9,6 +9,23 @@
     {{{ body }}}
 
     <script>
+       
+        var helpQuestion = confirm('Czy potrzebujesz pomocy w obsłudze tej aplikacji? \nOk - Przekierujemy Cię do okna z instrukcją obsługi apklikacji \nCancel - Przejdź do aplikacji');
+        if (helpQuestion == true) {
+            window.location.href = "instruction";
+        }
+
+        var mine = document.getElementById("mine");
+        mine.addEventListener("mouseover", mySecond());
+        function mySecond(xv) {
+            var xv = document.querySelector('input').value;
+            console.log(xv);
+
+            var xy = xv.split('.', 1);
+            console.log(xy);
+            console.log("dupa");
+        }
+
         var radios = document.forms["sg"].elements["speed-groups"];
         for (radio in radios) {
             radios[radio].onclick = function () {
@@ -16,6 +33,7 @@
                     //redirections for group1 zone 1
                     var v06zone1G1 = document.getElementById('v-06-zone1'); 
                     v06zone1G1.href = "/v-06-zone1";
+                    document.getElementById("current-selections").innerHTML = ("Pamo 1, Prędkość");
 
                     var v08zone1G1 = document.getElementById('v-08-zone1');
                     v08zone1G1.href = "/v-08-zone1";
@@ -70,7 +88,7 @@
                     alert("Wybierz grupę");
                 }
                
-            }
+            } 
         }
 
         
@@ -603,6 +621,8 @@
                 var speed = document.getElementById("butt-P1-0.6");
                 var speedValue = speed.value;
                 searchByTextFieldP1();
+
+                
             }
 
             //Zone 1, G1, speed 0.8
