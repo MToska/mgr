@@ -10,7 +10,6 @@ var hbs = require('express-handlebars');
 const crypto = require('crypto');
 const mongodb = require('mongodb');
 var fileUpload = require('express-fileupload');
-var mongoose = require('mongoose');
 var Author = require('./routes/schemaP1');
 var csv = require('fast-csv');
 var mongoose = require('mongoose');
@@ -44,7 +43,6 @@ app.get('/', function (req, res) {
 });
 
 
-var upload = require('./routes/upload');
 app.post('/', function (req, res) {
     if (!req.files)
         return res.status(400).send('No files were uploaded.');

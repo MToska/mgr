@@ -38,9 +38,6 @@
     <Compile Include="routes\schemaP1.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="routes\upload.js">
-      <SubType>Code</SubType>
-    </Compile>
     <Content Include="package.json" />
     <Content Include="public\stylesheets\Groups.PNG" />
     <Content Include="public\stylesheets\icon.png" />
