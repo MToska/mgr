@@ -11,18 +11,19 @@ const crypto = require('crypto');
 const mongodb = require('mongodb');
 var fileUpload = require('express-fileupload');
 var mongoose = require('mongoose');
-
+var Author = require('./routes/schemaP1');
+var csv = require('fast-csv');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
-var upload = require('./routes/upload');
-var schemaP1= require('./routes/schemaP1');
 
 
 var app = express();
 app.use(fileUpload());
-mongoose.connect('mongodb://localhost/my_mgr');
+mongoose.connect('mongodb://localhost/csvimport');
 
-// view engine setup
+
+//view engine setup
 app.engine('hbs', hbs({ extname: 'hbs', defaultLayout:'layout', layoutsDir: __dirname + '/views/'}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -37,12 +38,36 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', routes);
-//uploading
-app.use('/upload', upload);
-app.use('/schemaP1', schemaP1);
 
-var upload = require('./routes/upload.js');
-app.post('/upload', upload.post);
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/views/index.hbs');
+});
+
+
+var upload = require('./routes/upload');
+app.post('/', function (req, res) {
+    if (!req.files)
+        return res.status(400).send('No files were uploaded.');
+    var authorFile = req.files.file;
+    var authors = [];
+    csv
+        .fromString(authorFile.data.toString(), {
+            headers: true,
+            ignoreEmpty: true
+        })
+        .on("data", function (data) {
+            data['_id'] = new mongoose.Types.ObjectId();
+
+            authors.push(data);
+        })
+        .on("end", function () {
+            Author.create(authors, function (err, documents) {
+                if (err) throw err;
+
+                res.send(authors.length + ' authors have been successfully uploaded.');
+            });
+        });
+});
 
 
 // catch 404 and forward to error handler
@@ -75,7 +100,6 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
-
 
 
 

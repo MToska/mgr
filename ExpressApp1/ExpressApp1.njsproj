@@ -50,9 +50,6 @@
     <Content Include="views\instruction.hbs">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="views\newdb.hbs">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="views\error.hbs" />
     <Content Include="views\index.hbs">
       <SubType>Code</SubType>

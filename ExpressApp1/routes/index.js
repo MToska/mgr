@@ -3,6 +3,8 @@ var express = require('express');
 var router = express.Router();
 var assert = require('assert');
 var MongoClient = require('mongodb').MongoClient;
+var fileUpload = require('express-fileupload');
+var mongoose = require('mongoose');
 
 var url = 'mongodb://localhost:27017';
 
@@ -23,6 +25,7 @@ router.get('/zone2', function (req, res) {
 router.get('/instruction', function (req, res) {
     res.render('instruction');
 });
+
 
 // Group1
 //P1 speed: 0.6

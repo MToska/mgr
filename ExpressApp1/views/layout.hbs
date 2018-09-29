@@ -9,12 +9,18 @@
     {{{ body }}}
 
     <script>
-       
-        var helpQuestion = confirm('Czy potrzebujesz pomocy w obsłudze tej aplikacji? \nOk - Przekierujemy Cię do okna z instrukcją obsługi apklikacji \nCancel - Przejdź do aplikacji');
-        if (helpQuestion == true) {
-            window.location.href = "instruction";
+       /* pop out */
+        if (window.location.href == "http://localhost:1337/") {
+            var helpQuestion = confirm('Czy potrzebujesz pomocy w obsłudze tej aplikacji? \nOk - Przekierujemy Cię do okna z instrukcją obsługi apklikacji \nCancel - Przejdź do aplikacji');
+            if (helpQuestion == true) {
+                window.location.href = "instruction";
+            }
         }
 
+
+
+
+        /* */
         var mine = document.getElementById("mine");
         mine.addEventListener("mouseover", mySecond());
         function mySecond(xv) {
@@ -26,6 +32,7 @@
             console.log("dupa");
         }
 
+        /* redirections for groups and zones*/
         var radios = document.forms["sg"].elements["speed-groups"];
         for (radio in radios) {
             radios[radio].onclick = function () {
@@ -33,7 +40,6 @@
                     //redirections for group1 zone 1
                     var v06zone1G1 = document.getElementById('v-06-zone1'); 
                     v06zone1G1.href = "/v-06-zone1";
-                    document.getElementById("current-selections").innerHTML = ("Pamo 1, Prędkość");
 
                     var v08zone1G1 = document.getElementById('v-08-zone1');
                     v08zone1G1.href = "/v-08-zone1";
