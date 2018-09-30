@@ -18,7 +18,7 @@
         }
 
 
- /*radiobuttons unchecked*/
+ /*radiobuttons for table can be unchecked*/
         var myRadios = document.getElementsByClassName('subscribe');
         var setCheck;
         var x = 0;
@@ -34,6 +34,82 @@
             };
 
         }
+/*radiobuttons - what should be visible*/
+/*speed*/
+        document.getElementById("speed").addEventListener("click", myViewSpeed);
+        function myViewSpeed() {
+            var speedVisibility = document.getElementsByClassName("speed-visibility");
+            if (document.getElementById("speed").checked == true) {
+                for (var i = 0; i < speedVisibility.length; i += 1) {
+                    speedVisibility[i].style.display = 'table-cell';
+                }
+            } else {
+                for (var i = 0; i < speedVisibility.length; i += 1) {
+                    speedVisibility[i].style.display = "none";
+                }
+            }
+        }
+
+/*flow*/
+        document.getElementById("flow").addEventListener("click", myViewFlow);
+        function myViewFlow() {
+            var flowVisibility = document.getElementsByClassName("flow-visibility");
+            if (document.getElementById("flow").checked == true) {
+                for (var i = 0; i < flowVisibility.length; i += 1) {
+                   flowVisibility[i].style.display = 'table-cell';
+                }
+            } else {
+                for (var i = 0; i < flowVisibility.length; i += 1) {
+                    flowVisibility[i].style.display = "none";
+                }
+            }
+        }
+/*flow*/
+        document.getElementById("pressure").addEventListener("click", myViewPressure);
+        function myViewPressure() {
+            var pressureVisibility = document.getElementsByClassName("pressure-visibility");
+            if (document.getElementById("pressure").checked == true) {
+                for (var i = 0; i < pressureVisibility.length; i += 1) {
+                    pressureVisibility[i].style.display = 'table-cell';
+                }
+            } else {
+                for (var i = 0; i < pressureVisibility.length; i += 1) {
+                    pressureVisibility[i].style.display = "none";
+                }
+            }
+        }
+
+/*temperature*/
+        document.getElementById("temp").addEventListener("click", myViewTemp);
+        function myViewTemp() {
+            var tempVisibility = document.getElementsByClassName("temp-visibility");
+            if (document.getElementById("temp").checked == true) {
+                for (var i = 0; i < tempVisibility.length; i += 1) {
+                    tempVisibility[i].style.display = 'table-cell';
+                }
+            } else {
+                for (var i = 0; i < tempVisibility.length; i += 1) {
+                    tempVisibility[i].style.display = "none";
+                }
+            }
+        }
+/*others*/
+        document.getElementById("others").addEventListener("click", myViewOthers);
+        function myViewOthers() {
+            var othersVisibility = document.getElementsByClassName("others-visibility");
+            if (document.getElementById("others").checked == true) {
+                for (var i = 0; i < othersVisibility.length; i += 1) {
+                    othersVisibility[i].style.display = 'table-cell';
+                }
+            } else {
+                for (var i = 0; i < othersVisibility.length; i += 1) {
+                    othersVisibility[i].style.display = "none";
+                }
+            }
+        }
+
+
+
 /*catching file name to create db*/
 
         document.getElementById("submitDb").addEventListener("click", addDbFunction);

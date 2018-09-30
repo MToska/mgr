@@ -148,17 +148,20 @@ form.upload-style {
     padding-bottom: 1em;
     padding-right: 4em;
 }
-/*parameters*/
-
-
+/*parameters - displaying*/
+.flow-visibility,
+.pressure-visibility,
+.temp-visibility,
+.others-visibility {
+    display: none;
+}
 
 /* search textfield  */
-    
-    .searchText-button {
+.searchText-button {
     background-color: #8fe42d;
     border-color: #8fe42d;
     padding: 0.4em 0.8em;
-    }
+}
 
 
 
