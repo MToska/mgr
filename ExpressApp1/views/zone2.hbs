@@ -69,6 +69,16 @@
                         <button class="val butts" value="1.0" id="butt-P2-1.0"><a id="v-1-zone2">1.0</a></button>
                         <button class="val butts" value="1.2" id="butt-P2-1.2"><a id="v-12-zone2">1.2</a></button>
                     </div>
+                    <div>
+                        <form>
+                            <p>Jakie parametry Cię interesują?</p> <br>
+                            <input type="radio" name="showParameters1" id="speed" class="subscribe" value="" checked="checked">Prędkość [m/min]<br>
+                            <input type="radio" name="showParameters2" id="flow" class="subscribe">Przepływy [l/min]<br>
+                            <input type="radio" name="showParameters3" id="pressure" class="subscribe">Ciśnienie [bar]<br>
+                            <input type="radio" name="showParameters4" id="temp" class="subscribe">Parametry temperaturowe [°C]<br>
+                            <input type="radio" name="showParameters5" id="others" class="subscribe">Inne<br>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="right-selection">
@@ -94,257 +104,255 @@
                         <table>
                             <tr>
                                 <th></th>
-                                <th>
+                                <th class="speed-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1034">P2034</a>
                                         <span class="tooltiptext">Prędkość odlewania Gr.1. [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="speed-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1036">P2036</a>
                                         <span class="tooltiptext">Prędkość odlewania Gr.2. [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="others-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1058">P2058</a>
                                         <span class="tooltiptext">Akt.szer.kryst.górna [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="others-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1060">P2060</a>
                                         <span class="tooltiptext">Akt.szer.kryst.na zimno [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="others-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1062">P2062</a>
                                         <span class="tooltiptext">Akt. zbieżność prawa [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="others-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1064">P2064</a>
                                         <span class="tooltiptext">Akt. zbieżność lewa [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="speed-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1104">P2104</a>
                                         <span class="tooltiptext">Nastawa pręd. odlewania [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1106">P2106</a>
                                         <span class="tooltiptext">Ciśnienia wody zasil.krystalizatory [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1108">P2108</a>
                                         <span class="tooltiptext">Temp. wody zasil. krystalizatory [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1112">P2112</a>
                                         <span class="tooltiptext">Ciśnieie wody chł.maszyny zasilanie [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1114">P2114</a>
                                         <span class="tooltiptext">Temp. wody chłodzącej maszyny [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1118">P2118</a>
                                         <span class="tooltiptext">Przepływ wody w krystalizatorze, ściana stała [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1120">P2120</a>
                                         <span class="tooltiptext">Przepływ wody w krystalizatorze, ściana luźna [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1122">P2122</a>
                                         <span class="tooltiptext">Przepływ wody w krystalizatorze, ściana wąska, lewa [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1124">P2124</a>
                                         <span class="tooltiptext">Przepływ wody w krystalizatorze, ściana wąska, prawa [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1126">P2126</a>
                                         <span class="tooltiptext">Zmiana temperatury wody w krystalizatorze, delta T, ściana stała [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1128">P2128</a>
                                         <span class="tooltiptext">Zmiana temperatury wody w krystalizatorze, delta T, ściana luźna [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
 
                                     <div class="tooltip">
                                         <a href="/parameters#P1130">P2130</a>
                                         <span class="tooltiptext">Zmiana temperatury wody w krystalizatorze, delta T, ściana lewaa [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1132">P2132</a>
                                         <span class="tooltiptext">Zmiana temperatury wody w krystalizatorze, delta T, ściana prawa [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1134">P2134</a>
                                         <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 1-3 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1136">P2136</a>
                                         <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 4-7 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1138">P2138</a>
                                         <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 1-3 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1140">P2140</a>
                                         <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 4-7 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1142">P2142</a>
                                         <span class="tooltiptext">Temperatura wody chłodzącej natryskowej, zasilanie strefy 1-3 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
 
                                     <div class="tooltip">
                                         <a href="/parameters#P1144">P2144</a>
                                         <span class="tooltiptext">Temperatura wody chłodzącej natryskowej, zasilanie strefy 4-7 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1146">P2146</a>
                                         <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 1 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
-
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1148">P2148</a>
                                         <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 1 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1150">P2150</a>
                                         <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 2 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
-
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1152">P2152</a>
                                         <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 2 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1154">P2154</a>
                                         <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 3 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1156">P2156</a>
                                         <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 3 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1158">P2158</a>
                                         <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 4 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1160">P2160</a>
                                         <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 4 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1162">P2162</a>
                                         <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 5 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1164">P2164</a>
                                         <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 5 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1166">P2166</a>
                                         <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 6 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1168">P2168</a>
-                                        <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 7 [Kliknij po więcej informacji]</span>
+                                        <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 7 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="flow-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1170">P2170</a>
-                                        <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 6 [Kliknij po więcej informacji]</span>
+                                        <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 6 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="pressure-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1172">P2172</a>
-                                        <span class="tooltiptext">Przepływ wody chłodzącej natryskowej, zasilanie strefy 7 [Kliknij po więcej informacji]</span>
+                                        <span class="tooltiptext">Ciśnienie wody chłodzącej natryskowej, zasilanie strefy 7 [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1182">P2182</a>
                                         <span class="tooltiptext">Temperatura wody powrotnej chłodzenia maszyny [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="temp-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1188">P2188</a>
                                         <span class="tooltiptext">Temperatura ciekłej stali w kadzi pośredniej [Kliknij po więcej informacji]</span>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="speed-visibility">
                                     <div class="tooltip">
                                         <a href="/parameters#P1194">P2194</a>
                                         <span class="tooltiptext">Prędkość optymalna z II poziomu [Kliknij po więcej informacji]</span>
@@ -353,183 +361,183 @@
                             </tr>
                             <tr>
                                 <th>       </th>
-                                <th>[m/min]</th>
-                                <th>[m/min]</th>
-                                <th>[mm]</th>
-                                <th>[mm]</th>
-                                <th>[mm]</th>
-                                <th>[mm]</th>
-                                <th>[m/min]</th>
-                                <th>[bar]</th>
-                                <th>[°C]</th>
-                                <th>[bar]</th>
-                                <th>[°C]</th>
-                                <th>[l/min]</th>
-                                <th>[l/min]</th>
-                                <th>[l/min]</th>
-                                <th>[l/min]</th>
-                                <th>[°C]</th>
-                                <th>[°C]</th>
-                                <th>[°C]</th>
-                                <th>[°C]</th>
-                                <th>[l/min]</th>
-                                <th>[l/min]</th>
-                                <th>[bar]</th>
-                                <th>[bar]</th>
-                                <th>[°C]</th>
-                                <th>[°C]</th>
-                                <th>[l/min]</th>
-                                <th>[bar]</th>
-                                <th>[l/min]</th>
-                                <th>[bar]</th>
-                                <th>[l/min]</th>
-                                <th>[bar]</th>
-                                <th>[l/min]</th>
-                                <th>[bar]</th>
-                                <th>[l/min]</th>
-                                <th>[bar]</th>
-                                <th>[l/min]</th>
-                                <th>[bar]</th>
-                                <th>[l/min]</th>
-                                <th>[bar]</th>
-                                <th>[°C]</th>
-                                <th>[°C]</th>
-                                <th>[m/min]</th>
+                                <th class="speed-visibility">[m/min]</th>
+                                <th class="speed-visibility">[m/min]</th>
+                                <th class="others-visibility">[mm]</th>
+                                <th class="others-visibility">[mm]</th>
+                                <th class="others-visibility">[mm]</th>
+                                <th class="others-visibility">[mm]</th>
+                                <th class="speed-visibility">[m/min]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="flow-visibility">[l/min]</th>
+                                <th class="pressure-visibility">[bar]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="temp-visibility">[°C]</th>
+                                <th class="speed-visibility">[m/min]</th>
                             </tr>
                             <tr>
                                 <th>Min</th>
-                                <th>{{results.minP2034}}</th>
-                                <th>{{results.minP2036}}</th>
-                                <th>{{results.minP2058}}</th>
-                                <th>{{results.minP2060}}</th>
-                                <th>{{results.minP2062}}</th>
-                                <th>{{results.minP2064}}</th>
-                                <th>{{results.minP2104}}</th>
-                                <th>{{results.minP2106}}</th>
-                                <th>{{results.minP2108}}</th>
-                                <th>{{results.minP2112}}</th>
-                                <th>{{results.minP2114}}</th>
-                                <th>{{results.minP2118}}</th>
-                                <th>{{results.minP2120}}</th>
-                                <th>{{results.minP2122}}</th>
-                                <th>{{results.minP2124}}</th>
-                                <th>{{results.minP2126}}</th>
-                                <th>{{results.minP2128}}</th>
-                                <th>{{results.minP2130}}</th>
-                                <th>{{results.minP2132}}</th>
-                                <th>{{results.minP2134}}</th>
-                                <th>{{results.minP2136}}</th>
-                                <th>{{results.minP2138}}</th>
-                                <th>{{results.minP2140}}</th>
-                                <th>{{results.minP2142}}</th>
-                                <th>{{results.minP2144}}</th>
-                                <th>{{results.minP2146}}</th>
-                                <th>{{results.minP2148}}</th>
-                                <th>{{results.minP2150}}</th>
-                                <th>{{results.minP2152}}</th>
-                                <th>{{results.minP2154}}</th>
-                                <th>{{results.minP2156}}</th>
-                                <th>{{results.minP2158}}</th>
-                                <th>{{results.minP2160}}</th>
-                                <th>{{results.minP2162}}</th>
-                                <th>{{results.minP2164}}</th>
-                                <th>{{results.minP2166}}</th>
-                                <th>{{results.minP2168}}</th>
-                                <th>{{results.minP2170}}</th>
-                                <th>{{results.minP2172}}</th>
-                                <th>{{results.minP2182}}</th>
-                                <th>{{results.minP2188}}</th>
-                                <th>{{results.minP2194}}</th>
+                                <th class="speed-visibility">{{results.minP2034}}</th>
+                                <th class="speed-visibility">{{results.minP2036}}</th>
+                                <th class="others-visibility">{{results.minP2058}}</th>
+                                <th class="others-visibility">{{results.minP2060}}</th>
+                                <th class="others-visibility">{{results.minP2062}}</th>
+                                <th class="others-visibility">{{results.minP2064}}</th>
+                                <th class="speed-visibility">{{results.minP2104}}</th>
+                                <th class="pressure-visibility">{{results.minP2106}}</th>
+                                <th class="temp-visibility">{{results.minP2108}}</th>
+                                <th class="pressure-visibility">{{results.minP2112}}</th>
+                                <th class="temp-visibility">{{results.minP2114}}</th>
+                                <th class="flow-visibility">{{results.minP2118}}</th>
+                                <th class="flow-visibility">{{results.minP2120}}</th>
+                                <th class="flow-visibility">{{results.minP2122}}</th>
+                                <th class="flow-visibility">{{results.minP2124}}</th>
+                                <th class="temp-visibility">{{results.minP2126}}</th>
+                                <th class="temp-visibility">{{results.minP2128}}</th>
+                                <th class="temp-visibility">{{results.minP2130}}</th>
+                                <th class="temp-visibility">{{results.minP2132}}</th>
+                                <th class="flow-visibility">{{results.minP2134}}</th>
+                                <th class="flow-visibility">{{results.minP2136}}</th>
+                                <th class="pressure-visibility">{{results.minP2138}}</th>
+                                <th class="pressure-visibility">{{results.minP2140}}</th>
+                                <th class="temp-visibility">{{results.minP2142}}</th>
+                                <th class="temp-visibility">{{results.minP2144}}</th>
+                                <th class="flow-visibility">{{results.minP2146}}</th>
+                                <th class="pressure-visibility">{{results.minP2148}}</th>
+                                <th class="flow-visibility">{{results.minP2150}}</th>
+                                <th class="pressure-visibility">{{results.minP2152}}</th>
+                                <th class="flow-visibility">{{results.minP2154}}</th>
+                                <th class="pressure-visibility">{{results.minP2156}}</th>
+                                <th class="flow-visibility">{{results.minP2158}}</th>
+                                <th class="pressure-visibility">{{results.minP2160}}</th>
+                                <th class="flow-visibility">{{results.minP2162}}</th>
+                                <th class="pressure-visibility">{{results.minP2164}}</th>
+                                <th class="flow-visibility">{{results.minP2166}}</th>
+                                <th class="pressure-visibility">{{results.minP2168}}</th>
+                                <th class="flow-visibility">{{results.minP2170}}</th>
+                                <th class="pressure-visibility">{{results.minP2172}}</th>
+                                <th class="temp-visibility">{{results.minP2182}}</th>
+                                <th class="temp-visibility">{{results.minP2188}}</th>
+                                <th class="speed-visibility">{{results.minP2194}}</th>
                             </tr>
                             <tr>
                                 <th>Max</th>
-                                <th>{{results.maxP2034}}</th>
-                                <th>{{results.maxP2036}}</th>
-                                <th>{{results.maxP2058}}</th>
-                                <th>{{results.maxP2060}}</th>
-                                <th>{{results.maxP2062}}</th>
-                                <th>{{results.maxP2064}}</th>
-                                <th>{{results.maxP2104}}</th>
-                                <th>{{results.maxP2106}}</th>
-                                <th>{{results.maxP2108}}</th>
-                                <th>{{results.maxP2112}}</th>
-                                <th>{{results.maxP2114}}</th>
-                                <th>{{results.maxP2118}}</th>
-                                <th>{{results.maxP2120}}</th>
-                                <th>{{results.maxP2122}}</th>
-                                <th>{{results.maxP2124}}</th>
-                                <th>{{results.maxP2126}}</th>
-                                <th>{{results.maxP2128}}</th>
-                                <th>{{results.maxP2130}}</th>
-                                <th>{{results.maxP2132}}</th>
-                                <th>{{results.maxP2134}}</th>
-                                <th>{{results.maxP2136}}</th>
-                                <th>{{results.maxP2138}}</th>
-                                <th>{{results.maxP2140}}</th>
-                                <th>{{results.maxP2142}}</th>
-                                <th>{{results.maxP2144}}</th>
-                                <th>{{results.maxP2146}}</th>
-                                <th>{{results.maxP2148}}</th>
-                                <th>{{results.maxP2150}}</th>
-                                <th>{{results.maxP2152}}</th>
-                                <th>{{results.maxP2154}}</th>
-                                <th>{{results.maxP2156}}</th>
-                                <th>{{results.maxP2158}}</th>
-                                <th>{{results.maxP2160}}</th>
-                                <th>{{results.maxP2162}}</th>
-                                <th>{{results.maxP2164}}</th>
-                                <th>{{results.maxP2166}}</th>
-                                <th>{{results.maxP2168}}</th>
-                                <th>{{results.maxP2170}}</th>
-                                <th>{{results.maxP2172}}</th>
-                                <th>{{results.maxP2182}}</th>
-                                <th>{{results.maxP2188}}</th>
-                                <th>{{results.maxP2194}}</th>
+                                <th class="speed-visibility">{{results.maxP2034}}</th>
+                                <th class="speed-visibility">{{results.maxP2036}}</th>
+                                <th class="others-visibility">{{results.maxP2058}}</th>
+                                <th class="others-visibility">{{results.maxP2060}}</th>
+                                <th class="others-visibility">{{results.maxP2062}}</th>
+                                <th class="others-visibility">{{results.maxP2064}}</th>
+                                <th class="speed-visibility">{{results.maxP1204}}</th>
+                                <th class="pressure-visibility">{{results.maxP2106}}</th>
+                                <th class="temp-visibility">{{results.maxP2108}}</th>
+                                <th class="pressure-visibility">{{results.maxP2112}}</th>
+                                <th class="temp-visibility">{{results.maxP2114}}</th>
+                                <th class="flow-visibility">{{results.maxP2118}}</th>
+                                <th class="flow-visibility">{{results.maxP2120}}</th>
+                                <th class="flow-visibility">{{results.maxP2122}}</th>
+                                <th class="flow-visibility">{{results.maxP2124}}</th>
+                                <th class="temp-visibility">{{results.maxP2126}}</th>
+                                <th class="temp-visibility">{{results.maxP2128}}</th>
+                                <th class="temp-visibility">{{results.maxP2130}}</th>
+                                <th class="temp-visibility">{{results.maxP2132}}</th>
+                                <th class="flow-visibility">{{results.maxP2134}}</th>
+                                <th class="flow-visibility">{{results.maxP2136}}</th>
+                                <th class="pressure-visibility">{{results.maxP2138}}</th>
+                                <th class="pressure-visibility">{{results.maxP2140}}</th>
+                                <th class="temp-visibility">{{results.maxP2142}}</th>
+                                <th class="temp-visibility">{{results.maxP2144}}</th>
+                                <th class="flow-visibility">{{results.maxP2146}}</th>
+                                <th class="pressure-visibility">{{results.maxP2148}}</th>
+                                <th class="flow-visibility">{{results.maxP2150}}</th>
+                                <th class="pressure-visibility">{{results.maxP2152}}</th>
+                                <th class="flow-visibility">{{results.maxP2154}}</th>
+                                <th class="pressure-visibility">{{results.maxP2156}}</th>
+                                <th class="flow-visibility">{{results.maxP2158}}</th>
+                                <th class="pressure-visibility">{{results.maxP2160}}</th>
+                                <th class="flow-visibility">{{results.maxP2162}}</th>
+                                <th class="pressure-visibility">{{results.maxP2164}}</th>
+                                <th class="flow-visibility">{{results.maxP2166}}</th>
+                                <th class="pressure-visibility">{{results.maxP2168}}</th>
+                                <th class="flow-visibility">{{results.maxP2170}}</th>
+                                <th class="pressure-visibility">{{results.maxP2172}}</th>
+                                <th class="temp-visibility">{{results.maxP2182}}</th>
+                                <th class="temp-visibility">{{results.maxP2188}}</th>
+                                <th class="speed-visibility">{{results.maxP2194}}</th>
                             </tr>
                             <tr>
                                 <th>Średnia</th>
-                                <th>{{results.avgP2034}}</th>
-                                <th>{{results.avgP2036}}</th>
-                                <th>{{results.avgP2058}}</th>
-                                <th>{{results.avgP2060}}</th>
-                                <th>{{results.avgP2062}}</th>
-                                <th>{{results.avgP2064}}</th>
-                                <th>{{results.avgP2104}}</th>
-                                <th>{{results.avgP2106}}</th>
-                                <th>{{results.avgP2108}}</th>
-                                <th>{{results.avgP2112}}</th>
-                                <th>{{results.avgP2114}}</th>
-                                <th>{{results.avgP2118}}</th>
-                                <th>{{results.avgP2120}}</th>
-                                <th>{{results.avgP2122}}</th>
-                                <th>{{results.avgP2124}}</th>
-                                <th>{{results.avgP2126}}</th>
-                                <th>{{results.avgP2128}}</th>
-                                <th>{{results.avgP2130}}</th>
-                                <th>{{results.avgP2132}}</th>
-                                <th>{{results.avgP2134}}</th>
-                                <th>{{results.avgP2136}}</th>
-                                <th>{{results.avgP2138}}</th>
-                                <th>{{results.avgP2140}}</th>
-                                <th>{{results.avgP2142}}</th>
-                                <th>{{results.avgP2144}}</th>
-                                <th>{{results.avgP2146}}</th>
-                                <th>{{results.avgP2148}}</th>
-                                <th>{{results.avgP2150}}</th>
-                                <th>{{results.avgP2152}}</th>
-                                <th>{{results.avgP2154}}</th>
-                                <th>{{results.avgP2156}}</th>
-                                <th>{{results.avgP2158}}</th>
-                                <th>{{results.avgP2160}}</th>
-                                <th>{{results.avgP2162}}</th>
-                                <th>{{results.avgP2164}}</th>
-                                <th>{{results.avgP2166}}</th>
-                                <th>{{results.avgP2168}}</th>
-                                <th>{{results.avgP2170}}</th>
-                                <th>{{results.avgP2172}}</th>
-                                <th>{{results.avgP2182}}</th>
-                                <th>{{results.avgP2188}}</th>
-                                <th>{{results.avgP2194}}</th>
+                                <th class="speed-visibility">{{results.avgP2034}}</th>
+                                <th class="speed-visibility">{{results.avgP2036}}</th>
+                                <th class="others-visibility">{{results.avgP2058}}</th>
+                                <th class="others-visibility">{{results.avgP2060}}</th>
+                                <th class="others-visibility">{{results.avgP2062}}</th>
+                                <th class="others-visibility">{{results.avgP2064}}</th>
+                                <th class="speed-visibility">{{results.avgP2104}}</th>
+                                <th class="pressure-visibility">{{results.avgP2106}}</th>
+                                <th class="temp-visibility">{{results.avgP2108}}</th>
+                                <th class="pressure-visibility">{{results.avgP2112}}</th>
+                                <th class="temp-visibility">{{results.avgP2114}}</th>
+                                <th class="flow-visibility">{{results.avgP2118}}</th>
+                                <th class="flow-visibility">{{results.avgP2120}}</th>
+                                <th class="flow-visibility">{{results.avgP2122}}</th>
+                                <th class="flow-visibility">{{results.avgP2124}}</th>
+                                <th class="temp-visibility">{{results.avgP2126}}</th>
+                                <th class="temp-visibility">{{results.avgP2128}}</th>
+                                <th class="temp-visibility">{{results.avgP2130}}</th>
+                                <th class="temp-visibility">{{results.avgP2132}}</th>
+                                <th class="flow-visibility">{{results.avgP2134}}</th>
+                                <th class="flow-visibility">{{results.avgP2136}}</th>
+                                <th class="pressure-visibility">{{results.avgP2138}}</th>
+                                <th class="pressure-visibility">{{results.avgP2140}}</th>
+                                <th class="temp-visibility">{{results.avgP2142}}</th>
+                                <th class="temp-visibility">{{results.avgP2144}}</th>
+                                <th class="flow-visibility">{{results.avgP2146}}</th>
+                                <th class="pressure-visibility">{{results.avgP2148}}</th>
+                                <th class="flow-visibility">{{results.avgP2150}}</th>
+                                <th class="pressure-visibility">{{results.avgP2152}}</th>
+                                <th class="flow-visibility">{{results.avgP2154}}</th>
+                                <th class="pressure-visibility">{{results.avgP2156}}</th>
+                                <th class="flow-visibility">{{results.avgP2158}}</th>
+                                <th class="pressure-visibility">{{results.avgP2160}}</th>
+                                <th class="flow-visibility">{{results.avgP2162}}</th>
+                                <th class="pressure-visibility">{{results.avgP2164}}</th>
+                                <th class="flow-visibility">{{results.avgP2166}}</th>
+                                <th class="pressure-visibility">{{results.avgP2168}}</th>
+                                <th class="flow-visibility">{{results.avgP2170}}</th>
+                                <th class="pressure-visibility">{{results.avgP2172}}</th>
+                                <th class="temp-visibility">{{results.avgP2182}}</th>
+                                <th class="temp-visibility">{{results.avgP2188}}</th>
+                                <th class="speed-visibility">{{results.avgP2194}}</th>
                             </tr>
 
                         </table>
