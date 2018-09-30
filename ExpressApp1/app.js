@@ -14,12 +14,14 @@ var Author = require('./routes/schemaP1');
 var csv = require('fast-csv');
 var mongoose = require('mongoose');
 
+
+
 var routes = require('./routes/index');
 
 
 var app = express();
 app.use(fileUpload());
-mongoose.connect('mongodb://localhost/csvimport');
+mongoose.connect('mongodb://localhost/my_mgr');
 
 
 //view engine setup
@@ -62,7 +64,7 @@ app.post('/', function (req, res) {
             Author.create(authors, function (err, documents) {
                 if (err) throw err;
 
-                res.send(authors.length + ' authors have been successfully uploaded.');
+                res.send(authors.length + ' rekordów zostało dodanych do bazy .<br/> <a href="/"> Powrót do strony głównej</a>');
             });
         });
 });

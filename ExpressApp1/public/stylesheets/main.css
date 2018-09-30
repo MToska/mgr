@@ -44,7 +44,7 @@ p {
 }
 
 .right-selection {
-    margin: 2em 0 0 15em;
+    margin: -7em 0 0 43em;
 }
 
 .left-part,
@@ -52,10 +52,16 @@ p {
     display: inline-flex;
 }
 
+/*adding db and selecting sequence*/
+.first-section {
+    display:inline-flex;
+}
+
 /*selection panel*/
 .selection-panel {
-    display: inline-flex;
+    margin-left: 1em;
 }
+
 .zone-selection {
     display: inline-flex;
 }
@@ -63,9 +69,11 @@ p {
 .zone1,
 .zone2 {
         width: 50%;
-        margin-left: 2em;
         background-color: #b6b4b4;
         padding: 0.7em 0.7em;
+}
+.zone2 {
+    margin-left: 1em;
 }
 
 .first-zone,
@@ -95,7 +103,7 @@ input[type="submit"] {
 
 /*uploading files*/
 .new-db {
-    margin-left: 63em;
+    margin-left: 57em;
 }
 .upload-style {
     margin-top: 0.6em;
@@ -107,7 +115,9 @@ input[type="submit"] {
     padding: 0.3em 0.5em;
 }
 
-
+form.upload-style {
+    display: inline-flex;
+}
 
 
 
@@ -128,10 +138,6 @@ input[type="submit"] {
 
 
 /*speed groups*/
-.speed {
-    font-size: 1.5em;
-}
-
 .speed-groups {
     margin-top:1em;
 }
@@ -223,7 +229,7 @@ input[type="submit"] {
     /*zone tolltip*/
 .help-tip-zones {
     margin-top: 1.5em;
-    margin-left: 19em;
+    margin-left: 16em;
 }
 .zones-selection-tooltip {
     padding-top: 10px;

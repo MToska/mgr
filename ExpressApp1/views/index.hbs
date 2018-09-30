@@ -2,33 +2,39 @@
     <h1>Dobór głównych danych technologicznych procesu COS</h1>
     <p class="menu"><a href="/parameters" class="parametrycos">Parametry COS</a></p>
 </div>
-<div class="sequence-selection">
-    <p>Wybierz sekwencje i pasmo</p>
-    <form action="/" class="sequence-form">
-        <select name="sekwnum" class="select-sequence">
-            <option value="17193_P1">17193_P1</option>
-            <option value="17193_P2">17193_P2</option>
-        </select>
-        <br><br>
-        <input type="submit">
-    </form>
-</div>
-<div class="selection-panel">
-    <div class="zone-selection">
-        <p class="zone1"><a href="/">Pasmo 1</a> </p>
-        <p class="zone2"><a href="/zone2">Pasmo 2</a></p>
-        <div class="help-tip help-tip-zones">
-            <p>
-                <img src="./stylesheets/zones.png" class="zones-selection-tooltip" />
-            </p>
+<div class="first-section">
+    <div class="sequence-selection">
+        <p>Wybierz sekwencje i pasmo</p>
+
+        <div class="zone-selection">
+            <p class="zone1"><a href="/">Pasmo 1</a> </p>
+            <p class="zone2"><a href="/zone2">Pasmo 2</a></p>
+            <div class="help-tip help-tip-zones">
+                <p>
+                    <img src="./stylesheets/zones.png" class="zones-selection-tooltip" />
+                </p>
+            </div>
         </div>
     </div>
     <div class="new-db">
         <form action="/" method="POST" encType="multipart/form-data" class="upload-style">
-            <input type="file" name="file" accept="*.csv" /><br /><br />
-            <input type="submit" value="Upload" class="submit-new-file" id="mine" />
+            <input type="file" name="file" accept="*.csv" id="mine"><br />
+            <input type="submit" value="Upload" class="submit-new-file" id="submitDb" />
         </form>
     </div>
+</div>
+
+<div class="selection-panel">
+
+    <form action="/" class="sequence-form">
+        <select name="sekwnum" class="select-sequence" id="select-sequence">
+            <option value="Sekw17193_P1">Sekw17193_P1</option>
+            <option value="Sekw17193_P2">Sekw17193_P2</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+
 </div>
 <section class="get">
     <div class="main-space">
@@ -61,6 +67,15 @@
                     <button class="val butts" value="1.0" id="butt-P1-1.0"><a id="v-1-zone1">1.0</a></button>
                     <button class="val butts" value="1.2" id="butt-P1-1.2"><a id="v-12-zone1">1.2</a></button>
                 </div>
+                <div>
+                    <form>
+                        <p>Jakie parametry Cię interesują?</p> <br>
+                        <input type="radio" name="showParameters1" id="speed" class="subscribe" value="" checked="checked" >Prędkość [m/min]<br>
+                        <input type="radio" name="showParameters2" id="flow" class="subscribe">Przepływy [l/min]<br>
+                        <input type="radio" name="showParameters3" id="pressure" class="subscribe">Ciśnienie [bar]<br>
+                        <input type="radio" name="showParameters4" id="temp" class="subscribe">Parametry temperaturowe [°C]<br>
+                    </form>
+                </div>
             </div>
             <div class="right-selection">
                 <form action="/">
@@ -79,6 +94,7 @@
                     <p id="receivedValue"></p>
                 </form>
             </div>
+
         </div>
         <div class="right-part">
             <div class="zones">

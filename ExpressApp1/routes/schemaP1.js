@@ -1,5 +1,11 @@
 ﻿var mongoose = require('mongoose');
+var dbName = require('../views/layout.hbs');
 
+
+console.log(dbName);
+
+
+var coll = 'P1';
 var authorSchema = mongoose.Schema({
     Date: String,
     P1010: Number,
@@ -81,7 +87,7 @@ var authorSchema = mongoose.Schema({
     P1434: Number,
     P1435: Number,
     P1440: Number
-}, { collection: 'P1' });
+}, { collection: coll });
 
 var Author = mongoose.model('Author', authorSchema);
 

@@ -9,7 +9,7 @@
     {{{ body }}}
 
     <script>
-       /* pop out */
+ /* pop out */
         if (window.location.href == "http://localhost:1337/") {
             var helpQuestion = confirm('Czy potrzebujesz pomocy w obsłudze tej aplikacji? \nOk - Przekierujemy Cię do okna z instrukcją obsługi apklikacji \nCancel - Przejdź do aplikacji');
             if (helpQuestion == true) {
@@ -18,21 +18,46 @@
         }
 
 
+ /*radiobuttons unchecked*/
+        var myRadios = document.getElementsByClassName('subscribe');
+        var setCheck;
+        var x = 0;
+        for (x = 0; x < myRadios.length; x++) {
 
+            myRadios[x].onclick = function () {
+                if (setCheck != this) {
+                    setCheck = this;
+                } else {
+                    this.checked = false;
+                    setCheck = null;
+                }
+            };
 
-        /* */
-        var mine = document.getElementById("mine");
-        mine.addEventListener("mouseover", mySecond());
-        function mySecond(xv) {
-            var xv = document.querySelector('input').value;
-            console.log(xv);
+        }
+/*catching file name to create db*/
 
-            var xy = xv.split('.', 1);
-            console.log(xy);
-            console.log("dupa");
+        document.getElementById("submitDb").addEventListener("click", addDbFunction);
+        function addDbFunction() {
+            var sequence = document.getElementById("mine").value;
+            var seqArray = sequence.split("\\");
+            var fileName = seqArray[2];
+            var db = fileName.split(".");
+            var dbName = db[0];
+
+/*adding db name to dropdown list*/
+            var x = document.getElementById("select-sequence");
+            var newOption = document.createElement("option");
+            newOption.text = dbName;
+            var newMy = x.add(newOption);
+            
+            console.log(dbName);
+            return dbName, newMy;
+            
         }
 
-        /* redirections for groups and zones*/
+
+
+ /* redirections for groups and zones*/
         var radios = document.forms["sg"].elements["speed-groups"];
         for (radio in radios) {
             radios[radio].onclick = function () {
