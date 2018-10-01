@@ -40,8 +40,20 @@
     </Compile>
     <Content Include="package.json" />
     <Content Include="public\stylesheets\Groups.PNG" />
+    <Content Include="public\stylesheets\grupy-tip.PNG" />
+    <Content Include="public\stylesheets\grupy.PNG" />
     <Content Include="public\stylesheets\icon.png" />
     <Content Include="public\stylesheets\main.css" />
+    <Content Include="public\stylesheets\parametry.PNG" />
+    <Content Include="public\stylesheets\pasma-tip.PNG" />
+    <Content Include="public\stylesheets\pasma.PNG" />
+    <Content Include="public\stylesheets\predkosci.PNG" />
+    <Content Include="public\stylesheets\sekwencje.PNG" />
+    <Content Include="public\stylesheets\table-tip.PNG" />
+    <Content Include="public\stylesheets\upload_plikow_powiadomienie.PNG" />
+    <Content Include="public\stylesheets\upload_plików.PNG" />
+    <Content Include="public\stylesheets\widocznosc_param.PNG" />
+    <Content Include="public\stylesheets\wybor_parametru.PNG" />
     <Content Include="public\stylesheets\zones.PNG" />
     <Content Include="README.md" />
     <Content Include="views\instruction.hbs">

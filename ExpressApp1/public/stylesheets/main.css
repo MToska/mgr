@@ -37,6 +37,13 @@ p {
     text-decoration:none;
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 
 /*main-page*/
 .main-space {
@@ -330,4 +337,44 @@ tr:nth-child(even) {
 
 tr:target {
     color: red !important;
+}
+
+
+
+/*****instruction subpage***********/
+
+.instruction-main {
+    margin: 0em 2em 1em 2em;
+}
+
+/*return to main page*/
+.to-main-page-button {
+    padding: 1em;
+    background-color: #FF9800;
+    border-color: #FF9800;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    font-weight:bold;
+}
+
+.img-step1,
+.img-step2,
+.img-step3,
+.img-step6,
+.img-step8,
+.img-step10,
+.img-step11,
+.img-step12 {
+    width: 250px;
+}
+
+.img-step4,
+.img-step5 {
+    width:350px;
+}
+
+.img-step7 {
+    width: 900px;
 }
