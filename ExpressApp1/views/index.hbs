@@ -19,7 +19,7 @@
     <div class="new-db">
         <form action="/" method="POST" encType="multipart/form-data" class="upload-style">
             <input type="file" name="file" accept="*.csv" id="mine"><br />
-            <input type="submit" value="Upload" class="submit-new-file" id="submitDb" />
+            <input type="submit" value="Upload" class="submit-new-file" id="submitDb" onclick="AddDb()"/>
         </form>
     </div>
 </div>
@@ -28,8 +28,9 @@
 
     <form action="/" class="sequence-form">
         <select name="sekwnum" class="select-sequence" id="select-sequence">
-            <option value="Sekw17193_P1">Sekw17193_P1</option>
-            <option value="Sekw17193_P2">Sekw17193_P2</option>
+            {{#each collections}} 
+            <option value="{{ name }}">{{ name }}</option>
+            {{/ each}}
         </select>
         <br><br>
         <input type="submit">
@@ -74,7 +75,7 @@
                         <input type="radio" name="showParameters2" id="flow" class="subscribe">Przepływy [l/min]<br>
                         <input type="radio" name="showParameters3" id="pressure" class="subscribe">Ciśnienie [bar]<br>
                         <input type="radio" name="showParameters4" id="temp" class="subscribe">Parametry temperaturowe [°C]<br>
-                        <input type="radio" name="showParameters5" id="others" class="subscribe">Inne<br>
+                        <input type="radio" name="showParameters5" id="others" class="subscribe">Szerokość i zbieżność krystalizatora [mm]<br>
                     </form>
                 </div>
             </div>

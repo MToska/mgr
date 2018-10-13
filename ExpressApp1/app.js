@@ -7,7 +7,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
-const crypto = require('crypto');
 const mongodb = require('mongodb');
 var fileUpload = require('express-fileupload');
 var Author = require('./routes/schemaP1');

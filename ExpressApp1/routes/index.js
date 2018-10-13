@@ -5,13 +5,24 @@ var assert = require('assert');
 var MongoClient = require('mongodb').MongoClient;
 var fileUpload = require('express-fileupload');
 var mongoose = require('mongoose');
+var round = require('mongo-round');
 
 var url = 'mongodb://localhost:27017';
 
 
 /* GET home page. */
 router.get('/', function (req, res) {
-    res.render('index');
+    MongoClient.connect(url, (err, client) => {
+        var db = client.db('my_mgr');
+        var collections = db.listCollections().toArray(function (err, collections) {
+            try {
+                res.render('index', { collections })
+            } catch (err) {
+                console.log(err);
+            }
+
+        });
+    });
 });
 
 router.get('/parameters', function (req, res) {
@@ -27,14 +38,21 @@ router.get('/instruction', function (req, res) {
 });
 
 
+router.get('/', function (req, res) {
+
+});
+
 
 
 // Group1
 //P1 speed: 0.6
 router.get('/v-06-zone1', function (req, res) {
+    var a = document.location.pathname;
+    console.log(a);
+
         MongoClient.connect(url, (err, client) => {
             var db = client.db('my_mgr');
-            var xx = 'P1';
+            var xx = '17193_P1';
 
                 var results = db.collection(xx).aggregate(
                     [
@@ -44,11 +62,11 @@ router.get('/v-06-zone1', function (req, res) {
                                 _id: null,
                                 minP1034: { $min: "$P1034" },
                                 maxP1034: { $max: "$P1034" },
-                                avgP1034: { $avg: "$P1034" },
+                                avgP1034: { $avg: round("$P1034", 1) },
     
                                 minP1036: { $min: "$P1036" },
                                 maxP1036: { $max: "$P1036" },
-                                avgP1036: { $avg: "$P1036" },
+                                avgP1036: { $avg: round("$P1036", 2) },
     
                                 minP1058: { $min: "$P1058" },
                                 maxP1058: { $max: "$P1058" },
@@ -204,7 +222,7 @@ router.get('/v-06-zone1', function (req, res) {
     
                                 minP1194: { $min: "$P1194" },
                                 maxP1194: { $max: "$P1194" },
-                                avgP1194: { $avg: "$P1194" }
+                                avgP1194: { $avg: round("$P1194", 3) }
                             }
                         }
                     ]).next(function (err, results) {

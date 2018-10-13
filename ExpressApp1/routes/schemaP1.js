@@ -2,10 +2,9 @@
 var dbName = require('../views/layout.hbs');
 
 
-console.log(dbName);
 
 
-var coll = 'P1';
+var coll = '17193_P1';
 var authorSchema = mongoose.Schema({
     Date: String,
     P1010: Number,
