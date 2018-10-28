@@ -18,25 +18,6 @@
             }
         }
 
- /*catching file name to create db*/
-
-
-        function AddDb() {
-            var sequence = document.getElementById("mine").value;
-            var seqArray = sequence.split("\\");
-            var fileName = seqArray[2];
-            var db = fileName.split(".");
-            var dbName = db[0];
-
-            /*adding db name to dropdown list*/
-            var x = document.getElementById("select-sequence");
-            var newOption = document.createElement("option");
-            newOption.innerHTML = dbName;
-            x.appendChild(newOption);
-
-            return dbName;
-        }
-
 
 
 
@@ -136,12 +117,11 @@
         var radios = document.forms["sg"].elements["speed-groups"];
         for (radio in radios) {
             radios[radio].onclick = function () {
+                var urlRadioButtons = window.location.href;
+                var urlForSequenceArray = urlRadioButtons.split("=");
+                var urlForSequence = urlForSequenceArray[1];
+                console.log(urlForSequence);
 
-                var hrefAddress = window.location.href.split("=");
-                var rightPartofAdress = hrefAddress[1];
-                var collection = rightPartofAdress.split("Sekw");
-                var collectionName = collection[1];
-                console.log(collectionName);
 
                 if (this.value == 'zone1group1') {
                     //redirections for group1 zone 1

@@ -6,8 +6,16 @@ var MongoClient = require('mongodb').MongoClient;
 var fileUpload = require('express-fileupload');
 var mongoose = require('mongoose');
 var round = require('mongo-round');
-
+var bodyParser = require("body-parser");
+var layout = require('../views/layout');
 var url = 'mongodb://localhost:27017';
+
+
+
+router.use(bodyParser.urlencoded({
+    extended: false
+}));
+
 
 
 /* GET home page. */
@@ -47,14 +55,16 @@ router.get('/', function (req, res) {
 // Group1
 //P1 speed: 0.6
 router.get('/v-06-zone1', function (req, res) {
-    var a = document.location.pathname;
-    console.log(a);
+
+    var myHope = req.layout.urlForSequence; 
+
+    var xx = '17193_P1';
+
 
         MongoClient.connect(url, (err, client) => {
             var db = client.db('my_mgr');
-            var xx = '17193_P1';
 
-                var results = db.collection(xx).aggregate(
+                var results = db.collection(a).aggregate(
                     [
                         { $match: { P1034: { $gt: 0.6, $lt: 0.7 } } },
                         {

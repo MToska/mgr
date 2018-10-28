@@ -126,7 +126,9 @@ form.upload-style {
     display: inline-flex;
 }
 
-
+#addCollection {
+    margin-left: 1em;
+}
 
 
 .val {

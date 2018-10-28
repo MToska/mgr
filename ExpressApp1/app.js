@@ -9,7 +9,6 @@ var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
 const mongodb = require('mongodb');
 var fileUpload = require('express-fileupload');
-var Author = require('./routes/schemaP1');
 var csv = require('fast-csv');
 var mongoose = require('mongoose');
 
@@ -44,29 +43,41 @@ app.get('/', function (req, res) {
 });
 
 
-app.post('/', function (req, res) {
-    if (!req.files)
-        return res.status(400).send('No files were uploaded.');
-    var authorFile = req.files.file;
-    var authors = [];
-    csv
-        .fromString(authorFile.data.toString(), {
-            headers: true,
-            ignoreEmpty: true
-        })
-        .on("data", function (data) {
-            data['_id'] = new mongoose.Types.ObjectId();
 
-            authors.push(data);
-        })
-        .on("end", function () {
-            Author.create(authors, function (err, documents) {
-                if (err) throw err;
 
-                res.send(authors.length + ' rekordów zostało dodanych do bazy .<br/> <a href="/"> Powrót do strony głównej</a>');
+global.newCollectionName = " ";
+
+    app.post('/', function (req, res) {
+
+        var fileName = req.files.file.name;
+        var db = fileName.split(".");
+        var dbName = db[0];
+        newCollectionName = dbName;
+
+        if (!req.files)
+            return res.status(400).send('No files were uploaded.');
+        var authorFile = req.files.file;
+        var uploadingFiles = [];
+        var Author = require('./routes/schemaP1');
+        csv
+            .fromString(authorFile.data.toString(), {
+                headers: true,
+                ignoreEmpty: true
+            })
+            .on("data", function (data) {
+                data['_id'] = new mongoose.Types.ObjectId();
+
+                uploadingFiles.push(data);
+            })
+            .on("end", function () {
+                Author.create(uploadingFiles, function (err, documents) {
+                    if (err) throw err;
+
+                    res.send(uploadingFiles.length + ' rekordów zostało dodanych do bazy .<br/> <a href="/"> Powrót do strony głównej</a>');
+                });
             });
-        });
-});
+    });
+
 
 
 // catch 404 and forward to error handler
@@ -107,3 +118,4 @@ app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function () {
     debug('Express server listening on port ' + server.address().port);
 });
+

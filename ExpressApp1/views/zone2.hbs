@@ -29,8 +29,9 @@
 
     <form action="/" class="sequence-form">
         <select name="sekwnum" class="select-sequence" id="select-sequence">
-            <option value="Sekw17193_P1">Sekw17193_P1</option>
-            <option value="Sekw17193_P2">Sekw17193_P2</option>
+            {{#each collections}}
+            <option value="{{ name }}">{{ name }}</option>
+            {{/ each}}
         </select>
         <br><br>
         <input type="submit">
