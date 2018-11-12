@@ -20,6 +20,7 @@ router.use(bodyParser.urlencoded({
 
 /* GET home page. */
 router.get('/', function (req, res) {
+
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
         var collections = db.listCollections().toArray(function (err, collections) {
@@ -33,12 +34,35 @@ router.get('/', function (req, res) {
     });
 });
 
+
+global.selectedCollectionId = " ";
+router.post('/selectedcollectionzone1', function (req, res) {
+    selectedCollectionId = req.body.sekwnum;
+    res.redirect('/');
+});
+
+router.post('/selectedcollectionzone2', function (req, res) {
+    selectedCollectionId = req.body.sekwnum;
+    res.redirect('/zone2');
+});
+
 router.get('/parameters', function (req, res) {
     res.render('parameters');
 });
 
 router.get('/zone2', function (req, res) {
-    res.render('zone2');
+
+    MongoClient.connect(url, (err, client) => {
+        var db = client.db('my_mgr');
+        var collections = db.listCollections().toArray(function (err, collections) {
+            try {
+                res.render('zone2', { collections })
+            } catch (err) {
+                console.log(err);
+            }
+
+        });
+    });
 });
 
 router.get('/instruction', function (req, res) {
@@ -56,15 +80,10 @@ router.get('/', function (req, res) {
 //P1 speed: 0.6
 router.get('/v-06-zone1', function (req, res) {
 
-    var myHope = req.layout.urlForSequence; 
-
-    var xx = '17193_P1';
-
-
         MongoClient.connect(url, (err, client) => {
             var db = client.db('my_mgr');
 
-                var results = db.collection(a).aggregate(
+                var results = db.collection(selectedCollectionId).aggregate(
                     [
                         { $match: { P1034: { $gt: 0.6, $lt: 0.7 } } },
                         {
@@ -251,7 +270,7 @@ router.get('/v-06-zone1', function (req, res) {
 router.get('/v-06-zone2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-        var results = db.collection('P2').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
     [
         { $match: { P2034: { $gt: 0.6, $lt: 0.7 } } },
         {
@@ -441,7 +460,7 @@ router.get('/v-08-zone1', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
 
-        var results = db.collection('P1').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P1034: { $gt: 0.71, $lt: 0.9 } } },
                 {
@@ -628,7 +647,7 @@ router.get('/v-08-zone1', function (req, res) {
 router.get('/v-08-zone2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-        var results = db.collection('P2').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P2034: { $gt: 0.71, $lt: 0.9 } } },
                 {
@@ -817,7 +836,7 @@ router.get('/v-1-zone1', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
 
-        var results = db.collection('P1').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P1034: { $gt: 0.91, $lt: 1.1 } } },
                 {
@@ -1004,7 +1023,7 @@ router.get('/v-1-zone1', function (req, res) {
 router.get('/v-1-zone2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-        var results = db.collection('P2').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P2034: { $gt: 0.91, $lt: 1.1 } } },
                 {
@@ -1193,7 +1212,7 @@ router.get('/v-12-zone1', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
 
-        var results = db.collection('P1').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P1034: { $gt: 1.11, $lt: 1.3 } } },
                 {
@@ -1380,7 +1399,7 @@ router.get('/v-12-zone1', function (req, res) {
 router.get('/v-12-zone2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-        var results = db.collection('P2').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P2034: { $gt: 1.11, $lt: 1.3 } } },
                 {
@@ -1570,7 +1589,7 @@ router.get('/v-06-zone1-G2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
 
-        var results = db.collection('P1').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P1036: { $gt: 0.6, $lt: 0.7 } } },
                 {
@@ -1757,7 +1776,7 @@ router.get('/v-06-zone1-G2', function (req, res) {
 router.get('/v-06-zone2-G2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-        var results = db.collection('P2').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P2036: { $gt: 0.6, $lt: 0.7 } } },
                 {
@@ -1947,7 +1966,7 @@ router.get('/v-08-zone1-G2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
 
-        var results = db.collection('P1').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P1036: { $gt: 0.71, $lt: 0.9 } } },
                 {
@@ -2134,7 +2153,7 @@ router.get('/v-08-zone1-G2', function (req, res) {
 router.get('/v-08-zone2-G2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-        var results = db.collection('P2').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P2036: { $gt: 0.71, $lt: 0.9 } } },
                 {
@@ -2323,7 +2342,7 @@ router.get('/v-1-zone1-G2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
 
-        var results = db.collection('P1').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P1036: { $gt: 0.91, $lt: 1.1 } } },
                 {
@@ -2510,7 +2529,7 @@ router.get('/v-1-zone1-G2', function (req, res) {
 router.get('/v-1-zone2-G2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-        var results = db.collection('P2').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P2036: { $gt: 0.91, $lt: 1.1 } } },
                 {
@@ -2699,7 +2718,7 @@ router.get('/v-12-zone1-G2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
 
-        var results = db.collection('P1').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P1036: { $gt: 1.11, $lt: 1.3 } } },
                 {
@@ -2886,7 +2905,7 @@ router.get('/v-12-zone1-G2', function (req, res) {
 router.get('/v-12-zone2-G2', function (req, res) {
     MongoClient.connect(url, (err, client) => {
         var db = client.db('my_mgr');
-        var results = db.collection('P2').aggregate(
+        var results = db.collection(selectedCollectionId).aggregate(
             [
                 { $match: { P2036: { $gt: 1.11, $lt: 1.3 } } },
                 {

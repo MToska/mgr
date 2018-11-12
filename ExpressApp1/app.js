@@ -39,9 +39,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/views/index.hbs');
-});
 
+ res.sendFile(__dirname + '/views/index.hbs');
+
+
+});
 
 
 
@@ -53,7 +55,7 @@ global.newCollectionName = " ";
         var db = fileName.split(".");
         var dbName = db[0];
         newCollectionName = dbName;
-
+   
         if (!req.files)
             return res.status(400).send('No files were uploaded.');
         var authorFile = req.files.file;

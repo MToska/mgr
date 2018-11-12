@@ -10,7 +10,7 @@
 
     <script>
 
- /* pop out */
+ /* pop out
         if (window.location.href == "http://localhost:1337/") {
             var helpQuestion = confirm('Czy potrzebujesz pomocy w obsłudze tej aplikacji? \nOk - Przekierujemy Cię do okna z instrukcją obsługi aplikacji \nCancel - Przejdź do aplikacji');
             if (helpQuestion == true) {
@@ -18,9 +18,7 @@
             }
         }
 
-
-
-
+ */
  /*radiobuttons for table can be unchecked*/
         var myRadios = document.getElementsByClassName('subscribe');
         var setCheck;
@@ -117,11 +115,6 @@
         var radios = document.forms["sg"].elements["speed-groups"];
         for (radio in radios) {
             radios[radio].onclick = function () {
-                var urlRadioButtons = window.location.href;
-                var urlForSequenceArray = urlRadioButtons.split("=");
-                var urlForSequence = urlForSequenceArray[1];
-                console.log(urlForSequence);
-
 
                 if (this.value == 'zone1group1') {
                     //redirections for group1 zone 1

@@ -141,8 +141,10 @@ form.upload-style {
     padding: 0.5em 1em;
 }
 
-.parametrycos {
+.parametrycos,
+.instruction {
     color: #bbb4b4;
+    margin-left: 1em;
 }
 
 
